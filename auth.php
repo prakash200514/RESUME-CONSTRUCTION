@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +13,48 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .alert {
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            text-align: center;
+            animation: fadeIn 0.4s ease;
+        }
+        .alert-error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+        .alert-success {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+    </style>
 </head>
 <body class="auth-page">
     <div class="bg-mesh"></div>
 
     <div class="auth-container">
-        <div class="auth-header" data-aos="fade-down">
+        <div class="auth-header">
             <a href="index.html" class="logo">
                 <span class="logo-icon"></span>
                 <span class="logo-text">Aura<span>CV</span></span>
             </a>
         </div>
 
-        <div class="auth-card" data-aos="zoom-in">
+        <div class="auth-card">
+            <!-- Alert Messages -->
+            <?php if (isset($_SESSION['error'])): ?>
+                <div class="alert alert-error"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
+            <?php endif; ?>
+            <?php if (isset($_SESSION['success'])): ?>
+                <div class="alert alert-success"><?php echo $_SESSION['success']; unset($_SESSION['success']); ?></div>
+            <?php endif; ?>
+
             <!-- Tabs -->
             <div class="auth-tabs">
                 <button class="tab-btn active" id="login-tab">Login</button>
@@ -33,14 +63,14 @@
             </div>
 
             <!-- Login Form -->
-            <form id="login-form" class="auth-form active">
+            <form id="login-form" class="auth-form active" action="login.php" method="POST">
                 <div class="form-group">
                     <label for="login-email">Email Address</label>
-                    <input type="email" id="login-email" placeholder="name@company.com" required>
+                    <input type="email" id="login-email" name="email" placeholder="name@company.com" required>
                 </div>
                 <div class="form-group">
                     <label for="login-password">Password</label>
-                    <input type="password" id="login-password" placeholder="••••••••" required>
+                    <input type="password" id="login-password" name="password" placeholder="••••••••" required>
                 </div>
                 <div class="form-options">
                     <label class="checkbox-container">
@@ -62,24 +92,24 @@
             </form>
 
             <!-- Register Form -->
-            <form id="register-form" class="auth-form">
+            <form id="register-form" class="auth-form" action="register.php" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="reg-first">First Name</label>
-                        <input type="text" id="reg-first" placeholder="John" required>
+                        <input type="text" id="reg-first" name="first_name" placeholder="John" required>
                     </div>
                     <div class="form-group">
                         <label for="reg-last">Last Name</label>
-                        <input type="text" id="reg-last" placeholder="Doe" required>
+                        <input type="text" id="reg-last" name="last_name" placeholder="Doe" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="reg-email">Email Address</label>
-                    <input type="email" id="reg-email" placeholder="name@company.com" required>
+                    <input type="email" id="reg-email" name="email" placeholder="name@company.com" required>
                 </div>
                 <div class="form-group">
                     <label for="reg-password">Password</label>
-                    <input type="password" id="reg-password" placeholder="Min. 8 characters" required>
+                    <input type="password" id="reg-password" name="password" placeholder="Min. 8 characters" required>
                 </div>
                 <p class="terms-text">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
                 <button type="submit" class="btn btn-primary btn-full">Create Account</button>
@@ -94,11 +124,17 @@
             </form>
         </div>
         
-        <div class="auth-footer" data-aos="fade-up">
+        <div class="auth-footer">
             <p><a href="index.html">← Back to home</a></p>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Check URL hash for tab activation
+        if (window.location.hash === '#register') {
+            document.getElementById('register-tab').click();
+        }
+    </script>
 </body>
 </html>
