@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join AuraCV | Experience Premium Resume Building</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <div class="bg-mesh"></div>
+
+    <div class="auth-container">
+        <div class="auth-header" data-aos="fade-down">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">Aura<span>CV</span></span>
+            </a>
+        </div>
+
+        <div class="auth-card" data-aos="zoom-in">
+            <!-- Tabs -->
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="login-tab">Login</button>
+                <button class="tab-btn" id="register-tab">Register</button>
+                <div class="tab-indicator"></div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                
+                <div class="divider"><span>Or continue with</span></div>
+                
+                <div class="social-login">
+                    <button type="button" class="btn btn-outline btn-full">
+                        <img src="https://www.google.com/favicon.ico" alt="Google" width="16"> Google
+                    </button>
+                </div>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-first">First Name</label>
+                        <input type="text" id="reg-first" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-last">Last Name</label>
+                        <input type="text" id="reg-last" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email Address</label>
+                    <input type="email" id="reg-email" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" placeholder="Min. 8 characters" required>
+                </div>
+                <p class="terms-text">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                
+                <div class="divider"><span>Or continue with</span></div>
+                
+                <div class="social-login">
+                    <button type="button" class="btn btn-outline btn-full">
+                        <img src="https://www.google.com/favicon.ico" alt="Google" width="16"> Google
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="auth-footer" data-aos="fade-up">
+            <p><a href="index.html">← Back to home</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
