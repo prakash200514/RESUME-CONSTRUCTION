@@ -42,6 +42,7 @@ $google_id = $payload['sub'];
 $email = $payload['email'];
 $first_name = $payload['given_name'] ?? 'Google';
 $last_name = $payload['family_name'] ?? 'User';
+$picture = $payload['picture'] ?? '';
 
 try {
     // 1. Try to find user by google_id
@@ -74,10 +75,11 @@ try {
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['user_email'] = $user['email'];
     $_SESSION['user_name'] = $user['first_name'] . ' ' . $user['last_name'];
+    $_SESSION['user_picture'] = $picture;
     $_SESSION['success'] = "Successfully signed in with Google!";
 
     // Redirect to home page
-    header("Location: index.html");
+    header("Location: index.php");
     exit();
 
 } catch (PDOException $e) {
