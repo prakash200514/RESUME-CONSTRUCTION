@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php 
+require_once 'config.php';
+session_start(); 
+
+if (isset($_SESSION['user_id'])) {
+    header("Location: index.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +20,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Google Identity Services -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
     <!-- CSS -->
+
     <link rel="stylesheet" href="style.css">
     
     <style>
@@ -85,9 +98,7 @@
                 <div class="divider"><span>Or continue with</span></div>
                 
                 <div class="social-login">
-                    <button type="button" class="btn btn-outline btn-full">
-                        <img src="https://www.google.com/favicon.ico" alt="Google" width="16"> Google
-                    </button>
+                    <div class="google-login-container" style="width: 100%;"></div>
                 </div>
             </form>
 
@@ -117,9 +128,7 @@
                 <div class="divider"><span>Or continue with</span></div>
                 
                 <div class="social-login">
-                    <button type="button" class="btn btn-outline btn-full">
-                        <img src="https://www.google.com/favicon.ico" alt="Google" width="16"> Google
-                    </button>
+                    <div class="google-login-container" style="width: 100%;"></div>
                 </div>
             </form>
         </div>
@@ -135,6 +144,46 @@
         if (window.location.hash === '#register') {
             document.getElementById('register-tab').click();
         }
+
+        // Google Identity Services Initialization
+        function handleCredentialResponse(response) {
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'google-auth.php';
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'credential';
+            input.value = response.credential;
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
+        }
+
+        window.onload = function () {
+            if (typeof google !== 'undefined') {
+                google.accounts.id.initialize({
+                    client_id: "<?php echo GOOGLE_CLIENT_ID; ?>",
+                    callback: handleCredentialResponse
+                });
+                
+                const containers = document.querySelectorAll('.google-login-container');
+                containers.forEach(container => {
+                    google.accounts.id.renderButton(
+                        container,
+                        { 
+                            theme: "outline", 
+                            size: "large", 
+                            width: container.offsetWidth || 370, 
+                            text: "continue_with",
+                            shape: "rectangular",
+                            logo_alignment: "center"
+                        }
+                    );
+                });
+                
+                google.accounts.id.prompt(); 
+            }
+        };
     </script>
 </body>
 </html>
