@@ -3,11 +3,10 @@
 $host = 'localhost';
 $dbname = 'auracv_db';
 $username = 'root';
-$password = '';
+$password = 'password';
 
 // Google Auth Configuration
-// REPLACE THIS WITH YOUR ACTUAL CLIENT ID
-define('GOOGLE_CLIENT_ID', 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com');
+define('GOOGLE_CLIENT_ID', '751857537261-7ts0fif2gda7tvcn9bi76c720su3pdj8.apps.googleusercontent.com');
 
 try {
     // Create PDO connection
