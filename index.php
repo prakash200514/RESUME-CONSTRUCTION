@@ -15,44 +15,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <style>
-        .user-profile {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.5rem 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 100px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .user-profile:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--primary);
-        }
-        .user-avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--primary);
-        }
-        .user-name {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-        .logout-btn {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 0.5rem;
-        }
-        .logout-btn:hover {
-            color: #f87171;
-        }
-    </style>
+
 </head>
 <body>
     <!-- Background Mesh Gradient -->
@@ -84,7 +47,7 @@
                     </div>
                 <?php else: ?>
                     <a href="auth.php" class="btn btn-secondary">Login</a>
-                    <a href="auth.php" class="btn btn-primary">Build Now</a>
+                    <a href="<?php echo isset($_SESSION['user_id']) ? 'templates.php' : 'auth.php'; ?>" class="btn btn-primary">Build Now</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -98,8 +61,8 @@
                     <h1 class="hero-title">Elevate Your Career with <span class="gradient-text">AuraCV</span></h1>
                     <p class="hero-subtitle">Craft a stunning, professional resume in minutes. Stand out from the crowd with our premium templates designed for modern recruitment.</p>
                     <div class="hero-actions">
-                        <a href="auth.php" class="btn btn-large btn-primary">Start Building Free</a>
-                        <a href="#templates" class="btn btn-large btn-outline">Explore Templates</a>
+                        <a href="<?php echo isset($_SESSION['user_id']) ? 'templates.php' : 'auth.php'; ?>" class="btn btn-large btn-primary">Start Building Free</a>
+                        <a href="templates.php" class="btn btn-large btn-outline">Explore Templates</a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item">
