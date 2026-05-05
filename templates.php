@@ -55,7 +55,7 @@
 
         <div class="templates-grid">
             <!-- Modern Template -->
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="template-preview">
                     <img src="assets/template-modern.png" alt="Modern Executive Template">
                     <div class="template-overlay">
@@ -70,7 +70,7 @@
             </div>
 
             <!-- Creative Template -->
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="template-preview">
                     <img src="assets/template-creative.png" alt="Creative Professional Template">
                     <div class="template-overlay">
@@ -85,7 +85,7 @@
             </div>
 
             <!-- Tech/Minimalist Template -->
-            <div class="template-card">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="template-preview">
                     <img src="assets/template-minimal.png" alt="Minimalist Tech Template">
                     <div class="template-overlay">
