@@ -41,3 +41,23 @@
 | Server     | Apache (XAMPP recommended)          |
 
 ---
+## Project Structure
+
+```
+Resume builder/
+├── assets/                  # Images and static assets
+│   ├── hero-resume.png
+│   ├── template-modern.png
+│   ├── template-creative.png
+│   └── template-minimal.png
+├── index.php                # Landing page (home)
+├── auth.php                 # Login & registration page (tabbed UI)
+├── login.php                # Login form handler
+├── register.php             # Registration form handler
+├── logout.php               # Session destroy & redirect
+├── google-auth.php          # Google OAuth callback handler
+├── templates.php            # Template selection page
+├── config.php               # Database & Google OAuth configuration
+├── database.sql             # Database schema
+├── style.css                # Global stylesheet
+└── script.js                # Frontend interactivity & animations
