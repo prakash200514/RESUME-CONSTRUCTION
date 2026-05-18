@@ -87,3 +87,17 @@ Resume builder/
    ```
    http://localhost/Resume%20builder/
    ```
+## Database Setup
+
+1. Open **phpMyAdmin**: `http://localhost/phpmyadmin`
+2. Create a new database named `auracv_db`.
+3. Import the schema by running the provided SQL file:
+
+   - Go to the **Import** tab in phpMyAdmin
+   - Select `database.sql` from the project root
+   - Click **Go**
+
+   **Or** run it via the MySQL CLI:
+   ```bash
+   mysql -u root -p auracv_db < database.sql
+   `
