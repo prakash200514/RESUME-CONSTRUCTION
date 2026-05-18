@@ -29,3 +29,15 @@
 - 🚀 **One-Click Export** — Export resumes as PDF, Word, or shareable link
 - 📱 **Responsive Design** — Fully responsive layout with smooth animations
 - 🌙 **Dark Mode UI** — Glassmorphism-inspired dark aesthetic with gradient accents
+ ## Tech Stack
+
+| Layer      | Technology                          |
+|------------|-------------------------------------|
+| Backend    | PHP 8+                              |
+| Database   | MySQL (via PDO)                     |
+| Frontend   | HTML5, Vanilla CSS, JavaScript      |
+| Fonts      | Google Fonts (Inter, Outfit)        |
+| Auth       | Google Identity Services (OAuth 2.0)|
+| Server     | Apache (XAMPP recommended)          |
+
+---
