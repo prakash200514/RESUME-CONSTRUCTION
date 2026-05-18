@@ -101,3 +101,16 @@ Resume builder/
    ```bash
    mysql -u root -p auracv_db < database.sql
    `
+### Schema
+
+```sql
+CREATE TABLE IF NOT EXISTS users (
+    id          INT(11) AUTO_INCREMENT PRIMARY KEY,
+    google_id   VARCHAR(255) DEFAULT NULL,
+    first_name  VARCHAR(50)  NOT NULL,
+    last_name   VARCHAR(50)  NOT NULL,
+    email       VARCHAR(100) NOT NULL UNIQUE,
+    password    VARCHAR(255) DEFAULT NULL,
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
