@@ -114,3 +114,17 @@ CREATE TABLE IF NOT EXISTS users (
     created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
+## Google OAuth Setup
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project (or select an existing one).
+3. Navigate to **APIs & Services → Credentials**.
+4. Click **Create Credentials → OAuth 2.0 Client IDs**.
+5. Set the **Authorized JavaScript Origins** to:
+   ```
+   http://localhost
+   ```
+6. Copy the generated **Client ID** and paste it into `config.php`:
+   ```php
+   define('GOOGLE_CLIENT_ID', 'YOUR_GOOGLE_CLIENT_ID_HERE');
+   ```
