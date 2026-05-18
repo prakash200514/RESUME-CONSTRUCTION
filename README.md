@@ -19,3 +19,13 @@
 ## Overview
 
 **AuraCV** is a PHP/MySQL-powered resume builder web application that lets users create, customize, and export professional resumes in minutes. It offers multiple premium templates (Modern Executive, Creative Bold, Minimal Tech), seamless Google OAuth login, and a clean, animated UI designed for a premium user experience.
+
+## Features
+
+- 🔐 **User Authentication** — Email/password registration & login with session management
+- 🔑 **Google OAuth 2.0** — One-click sign-in via Google Identity Services
+- 🎨 **Premium Templates** — Three curated resume templates (Modern Executive, Creative Bold, Minimal Tech)
+- ✨ **Smart Suggestions** — AI-powered skill and description suggestions
+- 🚀 **One-Click Export** — Export resumes as PDF, Word, or shareable link
+- 📱 **Responsive Design** — Fully responsive layout with smooth animations
+- 🌙 **Dark Mode UI** — Glassmorphism-inspired dark aesthetic with gradient accents
