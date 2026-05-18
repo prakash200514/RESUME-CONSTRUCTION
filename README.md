@@ -122,6 +122,25 @@ CREATE TABLE IF NOT EXISTS users (
 4. Click **Create Credentials → OAuth 2.0 Client IDs**.
 5. Set the **Authorized JavaScript Origins** to:
    ```
+   
+## Configuration
+
+Open `config.php` and update the following values:
+
+```php
+// Database Configuration
+$host     = 'localhost';
+$dbname   = 'auracv_db';
+$username = 'root';         // Your MySQL username
+$password = '';             // Your MySQL password (blank for XAMPP default)
+
+// Google OAuth
+define('GOOGLE_CLIENT_ID', 'YOUR_GOOGLE_CLIENT_ID_HERE');
+```
+
+> ⚠️ **Security Note:** Do not commit `config.php` with real credentials to a public repository. Add it to `.gitignore` in production.
+
+---
    http://localhost
    ```
 6. Copy the generated **Client ID** and paste it into `config.php`:
