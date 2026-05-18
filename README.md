@@ -61,3 +61,29 @@ Resume builder/
 ├── database.sql             # Database schema
 ├── style.css                # Global stylesheet
 └── script.js                # Frontend interactivity & animations
+
+## Getting Started
+
+### Prerequisites
+
+- [XAMPP](https://www.apachefriends.org/) (or any Apache + PHP + MySQL stack)
+- PHP 8.0 or higher
+- MySQL 5.7 or higher
+
+### Installation
+
+1. **Clone or copy the project** into your XAMPP `htdocs` directory:
+   ```
+   C:\xampp\htdocs\Resume builder\
+   ```
+
+2. **Start Apache and MySQL** from the XAMPP Control Panel.
+
+3. **Set up the database** (see [Database Setup](#database-setup) below).
+
+4. **Configure** `config.php` with your credentials (see [Configuration](#configuration)).
+
+5. **Open your browser** and navigate to:
+   ```
+   http://localhost/Resume%20builder/
+   ```
