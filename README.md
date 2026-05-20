@@ -147,3 +147,13 @@ define('GOOGLE_CLIENT_ID', 'YOUR_GOOGLE_CLIENT_ID_HERE');
    ```php
    define('GOOGLE_CLIENT_ID', 'YOUR_GOOGLE_CLIENT_ID_HERE');
    ```
+# Usage
+
+| Page              | URL                                  | Description                          |
+|-------------------|--------------------------------------|--------------------------------------|
+| Home              | `/Resume%20builder/`                 | Landing page with features & hero    |
+| Login / Register  | `/Resume%20builder/auth.php`         | Tabbed auth form with Google login   |
+| Templates         | `/Resume%20builder/templates.php`    | Browse and select resume templates   |
+| Logout            | `/Resume%20builder/logout.php`       | Destroys session and redirects home  |
+
+---
