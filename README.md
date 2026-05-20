@@ -157,3 +157,6 @@ define('GOOGLE_CLIENT_ID', 'YOUR_GOOGLE_CLIENT_ID_HERE');
 | Logout            | `/Resume%20builder/logout.php`       | Destroys session and redirects home  |
 
 ---
+## License
+
+This project is for educational/personal use. All rights reserved © 2026 AuraCV.
