@@ -40,7 +40,7 @@
 | Auth       | Google Identity Services (OAuth 2.0)|
 | Server     | Apache (XAMPP recommended)          |
 
----
+
 ## Project Structure
 
 ```
