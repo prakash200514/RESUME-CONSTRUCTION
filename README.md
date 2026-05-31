@@ -41,7 +41,6 @@
 
 ## Project Structure
 
-```
 Resume builder/
 ├── assets/                  # Images and static assets
 │   ├── hero-resume.png
