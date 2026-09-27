@@ -16,20 +16,22 @@
     <style>
         /* Overall Page Layout */
         body {
-            background-color: var(--bg-dark);
+            background-color: #f1f5f9;
+            color: #0f172a;
             min-height: 100vh;
             overflow-x: hidden;
         }
 
         /* Top Sticky Toolbar */
         .builder-header {
-            background: rgba(10, 10, 11, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--surface-border);
             padding: 0.7rem 1.5rem;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
         }
 
         .builder-nav {
@@ -52,7 +54,7 @@
         /* Mode Switcher (1-Page Fresher vs 2-Page Experienced) */
         .mode-switch-group {
             display: flex;
-            background: rgba(255, 255, 255, 0.08);
+            background: #f1f5f9;
             border: 1px solid var(--surface-border);
             border-radius: 10px;
             padding: 3px;
@@ -75,13 +77,13 @@
         }
 
         .btn-mode:hover {
-            color: #ffffff;
+            color: var(--text-main);
         }
 
         .btn-mode.active {
             background: var(--gradient);
             color: #ffffff;
-            box-shadow: 0 2px 10px var(--primary-glow);
+            box-shadow: 0 2px 8px var(--primary-glow);
         }
 
         /* Workspace Grid: Form on Left, Live Preview on Right */
@@ -99,7 +101,7 @@
             width: 460px;
             min-width: 360px;
             max-width: 480px;
-            background: var(--surface);
+            background: #ffffff;
             border: 1px solid var(--surface-border);
             border-radius: 16px;
             padding: 1.5rem;
@@ -108,7 +110,7 @@
             position: sticky;
             top: 85px;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
         .form-panel.collapsed {
@@ -117,7 +119,7 @@
 
         /* Form Sections & Accordions */
         .form-section {
-            background: rgba(255, 255, 255, 0.02);
+            background: #f8fafc;
             border: 1px solid var(--surface-border);
             border-radius: 12px;
             margin-bottom: 1.15rem;
@@ -125,7 +127,7 @@
         }
 
         .form-section.highlight-experienced {
-            border-color: rgba(14, 165, 233, 0.4);
+            border-color: #bfdbfe;
         }
 
         .form-section-title {
@@ -133,17 +135,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 0.85rem 1rem;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 600;
             color: var(--text-main);
-            background: rgba(255, 255, 255, 0.04);
+            background: #ffffff;
             border-bottom: 1px solid var(--surface-border);
             cursor: pointer;
             user-select: none;
         }
 
         .form-section-title:hover {
-            background: rgba(255, 255, 255, 0.07);
+            background: #f1f5f9;
         }
 
         .form-section-body {
@@ -161,17 +163,17 @@
 
         .field-group label {
             font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--text-muted);
+            font-weight: 600;
+            color: #475569;
         }
 
         .field-input, .field-textarea {
             width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--surface-border);
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
             border-radius: 8px;
             padding: 0.55rem 0.75rem;
-            color: #ffffff;
+            color: var(--text-main);
             font-family: inherit;
             font-size: 0.88rem;
             transition: all 0.2s ease;
@@ -181,7 +183,7 @@
         .field-input:focus, .field-textarea:focus {
             outline: none;
             border-color: var(--primary);
-            background: rgba(255, 255, 255, 0.08);
+            background: #ffffff;
             box-shadow: 0 0 0 3px var(--primary-glow);
         }
 
@@ -193,7 +195,7 @@
 
         /* Dynamic Repeater Items */
         .repeater-item {
-            background: rgba(0, 0, 0, 0.25);
+            background: #ffffff;
             border: 1px solid var(--surface-border);
             border-radius: 8px;
             padding: 0.75rem;
@@ -207,14 +209,14 @@
             align-items: center;
             margin-bottom: 0.5rem;
             font-size: 0.8rem;
-            color: var(--secondary);
+            color: var(--primary-dark);
             font-weight: 600;
         }
 
         .btn-remove {
-            background: rgba(239, 68, 68, 0.15);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #f87171;
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
             padding: 0.2rem 0.5rem;
             font-size: 0.75rem;
             border-radius: 6px;
@@ -228,9 +230,9 @@
         }
 
         .btn-add {
-            background: rgba(14, 165, 233, 0.15);
-            border: 1px dashed rgba(14, 165, 233, 0.4);
-            color: var(--secondary);
+            background: #eff6ff;
+            border: 1px dashed #93c5fd;
+            color: var(--primary-dark);
             width: 100%;
             padding: 0.5rem;
             font-size: 0.85rem;
@@ -241,8 +243,8 @@
         }
 
         .btn-add:hover {
-            background: rgba(14, 165, 233, 0.25);
-            border-color: var(--secondary);
+            background: #dbeafe;
+            border-color: var(--primary);
         }
 
         /* Photo Upload Controls in Form */
@@ -277,12 +279,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.5rem 0.75rem;
-            background: rgba(255, 255, 255, 0.03);
+            padding: 0.6rem 1rem;
+            background: #ffffff;
             border: 1px solid var(--surface-border);
             border-radius: 10px;
-            color: var(--text-muted);
+            color: #475569;
             font-size: 0.85rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
         }
 
         /* Page Container with Page Tag */
@@ -293,9 +296,9 @@
         }
 
         .page-indicator-tag {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid var(--surface-border);
-            color: var(--text-muted);
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: var(--primary-dark);
             font-size: 0.75rem;
             font-weight: 600;
             padding: 0.25rem 0.6rem;
@@ -312,7 +315,7 @@
             max-width: 100%;
             min-height: 1100px;
             padding: 38px 45px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border-radius: 2px;
             box-sizing: border-box;
             position: relative;
