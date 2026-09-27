@@ -29,7 +29,7 @@
             </div>
             <nav class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#templates">Templates</a>
+                <a href="templates.php">Templates</a>
                 <a href="#pricing">Pricing</a>
             </nav>
             <div class="nav-cta">

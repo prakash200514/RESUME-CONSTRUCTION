@@ -54,18 +54,36 @@
         </section>
 
         <div class="templates-grid">
+            <!-- Classic Academic Template (Exact side-header layout with photo) -->
+            <div class="template-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="template-preview">
+                    <img src="assets/template-classic.png" alt="Classic Academic Template">
+                    <div class="template-overlay">
+                        <a href="builder.php?template=classic" class="btn btn-primary">Select Template</a>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h3 class="template-name" style="margin-bottom: 0;">Classic Academic</h3>
+                        <span class="badge" style="margin: 0; padding: 0.25rem 0.6rem; font-size: 0.75rem;">Popular</span>
+                    </div>
+                    <p class="template-desc">Formal two-column format with candidate photo, side section headers, elegant serif typography, and clean horizontal dividers.</p>
+                    <a href="builder.php?template=classic" class="btn btn-outline btn-full">Preview & Edit</a>
+                </div>
+            </div>
+
             <!-- Modern Template -->
             <div class="template-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="template-preview">
                     <img src="assets/template-modern.png" alt="Modern Executive Template">
                     <div class="template-overlay">
-                        <a href="#" class="btn btn-primary">Select Template</a>
+                        <a href="builder.php?template=modern" class="btn btn-primary">Select Template</a>
                     </div>
                 </div>
                 <div class="template-info">
                     <h3 class="template-name">Modern Executive</h3>
                     <p class="template-desc">Clean, high-impact design perfect for corporate roles and leadership positions.</p>
-                    <a href="#" class="btn btn-outline btn-full">Preview</a>
+                    <a href="builder.php?template=modern" class="btn btn-outline btn-full">Preview</a>
                 </div>
             </div>
 
@@ -74,13 +92,13 @@
                 <div class="template-preview">
                     <img src="assets/template-creative.png" alt="Creative Professional Template">
                     <div class="template-overlay">
-                        <a href="#" class="btn btn-primary">Select Template</a>
+                        <a href="builder.php?template=creative" class="btn btn-primary">Select Template</a>
                     </div>
                 </div>
                 <div class="template-info">
                     <h3 class="template-name">Creative Bold</h3>
                     <p class="template-desc">Express your personality with vibrant colors and a unique, eye-catching layout.</p>
-                    <a href="#" class="btn btn-outline btn-full">Preview</a>
+                    <a href="builder.php?template=creative" class="btn btn-outline btn-full">Preview</a>
                 </div>
             </div>
 
@@ -89,13 +107,13 @@
                 <div class="template-preview">
                     <img src="assets/template-minimal.png" alt="Minimalist Tech Template">
                     <div class="template-overlay">
-                        <a href="#" class="btn btn-primary">Select Template</a>
+                        <a href="builder.php?template=minimal" class="btn btn-primary">Select Template</a>
                     </div>
                 </div>
                 <div class="template-info">
                     <h3 class="template-name">Minimal Tech</h3>
                     <p class="template-desc">Optimized for tech roles, focusing on skills, projects, and high readability.</p>
-                    <a href="#" class="btn btn-outline btn-full">Preview</a>
+                    <a href="builder.php?template=minimal" class="btn btn-outline btn-full">Preview</a>
                 </div>
             </div>
         </div>

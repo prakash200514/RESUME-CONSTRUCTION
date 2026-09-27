@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" width="160" height="200">
+  <rect width="160" height="200" fill="#f1f5f9"/>
+  <!-- Head -->
+  <circle cx="80" cy="70" r="36" fill="#94a3b8"/>
+  <!-- Hair / Face contour -->
+  <path d="M48 68 C48 45, 60 36, 80 36 C100 36, 112 45, 112 68 C112 50, 100 42, 80 42 C60 42, 48 50, 48 68 Z" fill="#64748b"/>
+  <!-- Neck -->
+  <rect x="72" y="102" width="16" height="22" fill="#cbd5e1"/>
+  <!-- Collar & Shirt -->
+  <path d="M45 130 L80 148 L115 130 L135 200 L25 200 Z" fill="#334155"/>
+  <path d="M80 120 L70 145 L80 155 L90 145 Z" fill="#ffffff"/>
+  <path d="M77 146 L83 146 L85 185 L75 185 Z" fill="#0284c7"/>
+</svg>
