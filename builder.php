@@ -450,14 +450,22 @@
             font-family: 'Inter', system-ui, sans-serif;
             font-size: 12.5px;
             color: #1a1a1a;
-            line-height: 1.45;
+            line-height: 1.35;
             box-sizing: border-box;
+        }
+
+        #view-address,
+        #view-contact,
+        #view-objective,
+        #view-skills,
+        .exp-desc {
             white-space: pre-line;
         }
 
         /* Work Experience Entry */
         .exp-entry {
-            margin-bottom: 11px;
+            margin-bottom: 7px;
+            line-height: 1.35;
         }
         .exp-entry:last-child {
             margin-bottom: 0;
@@ -466,7 +474,7 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
         .exp-company {
             font-family: 'Merriweather', Georgia, serif;
@@ -483,17 +491,18 @@
             font-style: italic;
             font-size: 12.5px;
             color: #222;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
         .exp-desc {
             font-size: 12px;
             color: #333;
-            line-height: 1.4;
+            line-height: 1.35;
         }
 
         /* Education Entry */
         .edu-entry {
-            margin-bottom: 9px;
+            margin-bottom: 6px;
+            line-height: 1.3;
         }
         .edu-entry:last-child {
             margin-bottom: 0;
@@ -504,19 +513,23 @@
             font-style: italic;
             font-size: 13px;
             color: #111;
+            line-height: 1.3;
         }
         .edu-degree {
             font-size: 12px;
             color: #333;
+            line-height: 1.3;
         }
         .edu-year {
             font-size: 12px;
             color: #333;
+            line-height: 1.3;
         }
 
         /* Project Entry */
         .project-entry {
-            margin-bottom: 11px;
+            margin-bottom: 7px;
+            line-height: 1.35;
         }
         .project-entry:last-child {
             margin-bottom: 0;
@@ -526,16 +539,18 @@
             text-transform: uppercase;
             font-size: 12.5px;
             color: #111;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
+            line-height: 1.3;
         }
         .project-tech {
             font-size: 12px;
             margin-bottom: 2px;
+            line-height: 1.35;
         }
         .project-desc {
             font-size: 12px;
             color: #333;
-            line-height: 1.4;
+            line-height: 1.35;
         }
 
         /* Bullet List */
@@ -1410,14 +1425,7 @@
                 currentData.experiences.forEach(e => {
                     const div = document.createElement('div');
                     div.className = 'exp-entry';
-                    div.innerHTML = `
-                        <div class="exp-header">
-                            <span class="exp-company">${escapeHtml(e.company)}</span>
-                            <span class="exp-duration">${escapeHtml(e.duration)}</span>
-                        </div>
-                        <div class="exp-role">${escapeHtml(e.role)}</div>
-                        <div class="exp-desc">${escapeHtml(e.desc)}</div>
-                    `;
+                    div.innerHTML = `<div class="exp-header"><span class="exp-company">${escapeHtml(e.company)}</span><span class="exp-duration">${escapeHtml(e.duration)}</span></div><div class="exp-role">${escapeHtml(e.role)}</div><div class="exp-desc">${escapeHtml(e.desc)}</div>`;
                     viewExp.appendChild(div);
                 });
             } else {
@@ -1426,23 +1434,11 @@
 
             // HTML builders for Education, Projects, Interests, Achievements, Links, Declaration
             function buildEducationHTML() {
-                return (currentData.education || []).map(edu => `
-                    <div class="edu-entry">
-                        <div class="edu-school">${escapeHtml(edu.school)}</div>
-                        <div class="edu-degree">${escapeHtml(edu.degree)}</div>
-                        <div class="edu-year">${escapeHtml(edu.year)}</div>
-                    </div>
-                `).join('');
+                return (currentData.education || []).map(edu => `<div class="edu-entry"><div class="edu-school">${escapeHtml(edu.school)}</div><div class="edu-degree">${escapeHtml(edu.degree)}</div><div class="edu-year">${escapeHtml(edu.year)}</div></div>`).join('');
             }
 
             function buildProjectsHTML() {
-                return (currentData.projects || []).map(p => `
-                    <div class="project-entry">
-                        <div class="project-heading">${escapeHtml(p.name)}</div>
-                        <div class="project-tech"><b>Technologies Used:</b> ${escapeHtml(p.tech)}</div>
-                        <div class="project-desc">${escapeHtml(p.desc)}</div>
-                    </div>
-                `).join('');
+                return (currentData.projects || []).map(p => `<div class="project-entry"><div class="project-heading">${escapeHtml(p.name)}</div><div class="project-tech"><b>Technologies Used:</b> ${escapeHtml(p.tech)}</div><div class="project-desc">${escapeHtml(p.desc)}</div></div>`).join('');
             }
 
             function buildListHTML(str) {
