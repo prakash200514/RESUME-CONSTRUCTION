@@ -676,7 +676,7 @@
                 margin: 0;
             }
         }
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 

@@ -24,7 +24,7 @@ if (isset($_SESSION['user_id'])) {
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
 
     <style>
         .auth-card {

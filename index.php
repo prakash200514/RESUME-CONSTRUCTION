@@ -12,8 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS (v=4 for instant cache refresh) -->
-    <link rel="stylesheet" href="style.css?v=4">
+    <!-- CSS (v=5 for instant cache refresh) -->
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -51,6 +51,95 @@
     </header>
 
     <main>
+
+        <!-- ============================================================
+             ZETY TOP HERO BANNER (Fast. Easy. Effective. — From Screenshot)
+             ============================================================ -->
+        <section class="zety-intro-hero">
+            <div class="container">
+                <div class="zety-intro-eyebrow">Fast. Easy. Effective.</div>
+                <h1 class="zety-intro-title">AuraCV. The Best Resume Maker Online.</h1>
+                <p class="zety-intro-subtitle">
+                    Whether you want to build a new resume from scratch or improve an existing one, let AuraCV help you present your work life, personality, and skills on a resume that stands out.
+                </p>
+                <div class="zety-intro-actions">
+                    <button class="btn-zety-amber open-wizard-btn">Create new resume</button>
+                    <a href="templates.php" class="btn-zety-outline">Improve my resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             3-STEP VALUE SECTION (Zety Image 2)
+             ============================================================ -->
+        <section id="how-it-works" class="process-section">
+            <div class="container">
+
+                <div class="process-grid">
+
+                    <!-- Step 1 Card -->
+                    <div class="process-card">
+                        <div class="process-illustration">
+                            <svg width="110" height="110" viewBox="0 0 120 120" fill="none">
+                                <rect x="25" y="15" width="70" height="90" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+                                <rect x="35" y="28" width="30" height="6" rx="2" fill="#185ADB"/>
+                                <rect x="35" y="40" width="50" height="3" rx="1.5" fill="#E5E7EB"/>
+                                <rect x="35" y="48" width="45" height="3" rx="1.5" fill="#E5E7EB"/>
+                                <rect x="35" y="62" width="25" height="4" rx="2" fill="#2563EB"/>
+                                <rect x="35" y="72" width="50" height="3" rx="1.5" fill="#E5E7EB"/>
+                                <rect x="35" y="80" width="40" height="3" rx="1.5" fill="#E5E7EB"/>
+                                <circle cx="80" cy="90" r="14" fill="#FFB800"/>
+                                <path d="M75 90L79 94L86 86" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Pick a resume template.</h3>
+                        <p>Choose a sleek design and layout to get started. All crafted for students and campus recruiters.</p>
+                    </div>
+
+                    <!-- Step 2 Card -->
+                    <div class="process-card">
+                        <div class="process-illustration">
+                            <svg width="140" height="110" viewBox="0 0 150 120" fill="none">
+                                <rect x="15" y="20" width="120" height="80" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+                                <rect x="25" y="32" width="45" height="6" rx="3" fill="#111827"/>
+                                <rect x="25" y="48" width="100" height="24" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+                                <rect x="32" y="54" width="12" height="12" rx="3" fill="#185ADB"/>
+                                <path d="M35 60L37.5 62.5L41.5 56.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <text x="50" y="64" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#185ADB">&#9733; Expert Recommended</text>
+                                <rect x="25" y="80" width="50" height="12" rx="3" fill="#185ADB"/>
+                                <text x="32" y="89" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#FFFFFF">ADD SKILL</text>
+                            </svg>
+                        </div>
+                        <h3>Fill in the blanks.</h3>
+                        <p>Type in a few words. Let our student resume wizard organize your college, skills, and projects.</p>
+                    </div>
+
+                    <!-- Step 3 Card -->
+                    <div class="process-card">
+                        <div class="process-illustration">
+                            <svg width="120" height="110" viewBox="0 0 130 120" fill="none">
+                                <rect x="25" y="15" width="65" height="85" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+                                <rect x="75" y="25" width="40" height="60" rx="6" fill="#F8FAFC" stroke="#93C5FD" stroke-width="1.5"/>
+                                <circle cx="95" cy="45" r="8" fill="#2563EB"/>
+                                <circle cx="85" cy="65" r="5" fill="#FFB800"/>
+                                <circle cx="100" cy="65" r="5" fill="#10B981"/>
+                                <circle cx="108" cy="78" r="14" fill="#185ADB"/>
+                                <path d="M108 72V84M103 80L108 84L113 80" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Customize your document.</h3>
+                        <p>Make it truly yours. 1-page for freshers, 2-page for experienced, and custom color accents.</p>
+                    </div>
+
+                </div>
+
+                <div class="process-top-cta" style="margin-bottom: 0;">
+                    <button class="btn btn-amber open-wizard-btn">Create new resume</button>
+                    <a href="templates.php" class="btn btn-outline-dark">Improve my resume</a>
+                </div>
+
+            </div>
+        </section>
 
         <!-- ============================================================
              HERO SECTION ("Just three simple steps" — Zety Image 3)
@@ -137,83 +226,6 @@
                             <span class="paper-tag">Communication</span>
                         </div>
                     </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ============================================================
-             3-STEP VALUE SECTION (Zety Image 2)
-             ============================================================ -->
-        <section id="how-it-works" class="process-section">
-            <div class="container">
-
-                <div class="process-top-cta">
-                    <button class="btn btn-amber open-wizard-btn">Create new resume</button>
-                    <a href="templates.php" class="btn btn-outline-blue">Improve my resume</a>
-                </div>
-
-                <div class="process-grid">
-
-                    <!-- Step 1 Card -->
-                    <div class="process-card">
-                        <div class="process-illustration">
-                            <svg width="110" height="110" viewBox="0 0 120 120" fill="none">
-                                <rect x="25" y="15" width="70" height="90" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
-                                <rect x="35" y="28" width="30" height="6" rx="2" fill="#185ADB"/>
-                                <rect x="35" y="40" width="50" height="3" rx="1.5" fill="#E5E7EB"/>
-                                <rect x="35" y="48" width="45" height="3" rx="1.5" fill="#E5E7EB"/>
-                                <rect x="35" y="62" width="25" height="4" rx="2" fill="#2563EB"/>
-                                <rect x="35" y="72" width="50" height="3" rx="1.5" fill="#E5E7EB"/>
-                                <rect x="35" y="80" width="40" height="3" rx="1.5" fill="#E5E7EB"/>
-                                <circle cx="80" cy="90" r="14" fill="#FFB800"/>
-                                <path d="M75 90L79 94L86 86" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3>Pick a resume template.</h3>
-                        <p>Choose a sleek design and layout to get started. All crafted for students and campus recruiters.</p>
-                    </div>
-
-                    <!-- Step 2 Card -->
-                    <div class="process-card">
-                        <div class="process-illustration">
-                            <svg width="140" height="110" viewBox="0 0 150 120" fill="none">
-                                <rect x="15" y="20" width="120" height="80" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
-                                <rect x="25" y="32" width="45" height="6" rx="3" fill="#111827"/>
-                                <rect x="25" y="48" width="100" height="24" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
-                                <rect x="32" y="54" width="12" height="12" rx="3" fill="#185ADB"/>
-                                <path d="M35 60L37.5 62.5L41.5 56.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <text x="50" y="64" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#185ADB">&#9733; Expert Recommended</text>
-                                <rect x="25" y="80" width="50" height="12" rx="3" fill="#185ADB"/>
-                                <text x="32" y="89" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#FFFFFF">ADD SKILL</text>
-                            </svg>
-                        </div>
-                        <h3>Fill in the blanks.</h3>
-                        <p>Type in a few words. Let our student resume wizard organize your college, skills, and projects.</p>
-                    </div>
-
-                    <!-- Step 3 Card -->
-                    <div class="process-card">
-                        <div class="process-illustration">
-                            <svg width="120" height="110" viewBox="0 0 130 120" fill="none">
-                                <rect x="25" y="15" width="65" height="85" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
-                                <rect x="75" y="25" width="40" height="60" rx="6" fill="#F8FAFC" stroke="#93C5FD" stroke-width="1.5"/>
-                                <circle cx="95" cy="45" r="8" fill="#2563EB"/>
-                                <circle cx="85" cy="65" r="5" fill="#FFB800"/>
-                                <circle cx="100" cy="65" r="5" fill="#10B981"/>
-                                <circle cx="108" cy="78" r="14" fill="#185ADB"/>
-                                <path d="M108 72V84M103 80L108 84L113 80" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3>Customize your document.</h3>
-                        <p>Make it truly yours. 1-page for freshers, 2-page for experienced, and custom color accents.</p>
-                    </div>
-
-                </div>
-
-                <div class="process-top-cta" style="margin-bottom: 0;">
-                    <button class="btn btn-amber open-wizard-btn">Create new resume</button>
-                    <a href="templates.php" class="btn btn-outline-dark">Improve my resume</a>
                 </div>
 
             </div>
