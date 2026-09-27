@@ -72,38 +72,8 @@
                 </div>
             </div>
 
-            <!-- Modern Template -->
-            <div class="template-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="template-preview">
-                    <img src="assets/template-modern.png" alt="Modern Executive Template">
-                    <div class="template-overlay">
-                        <a href="builder.php?template=modern" class="btn btn-primary">Select Template</a>
-                    </div>
-                </div>
-                <div class="template-info">
-                    <h3 class="template-name">Modern Executive</h3>
-                    <p class="template-desc">Clean, high-impact design perfect for corporate roles and leadership positions.</p>
-                    <a href="builder.php?template=modern" class="btn btn-outline btn-full">Preview</a>
-                </div>
-            </div>
-
-            <!-- Creative Template -->
-            <div class="template-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="template-preview">
-                    <img src="assets/template-creative.png" alt="Creative Professional Template">
-                    <div class="template-overlay">
-                        <a href="builder.php?template=creative" class="btn btn-primary">Select Template</a>
-                    </div>
-                </div>
-                <div class="template-info">
-                    <h3 class="template-name">Creative Bold</h3>
-                    <p class="template-desc">Express your personality with vibrant colors and a unique, eye-catching layout.</p>
-                    <a href="builder.php?template=creative" class="btn btn-outline btn-full">Preview</a>
-                </div>
-            </div>
-
             <!-- Tech/Minimalist Template -->
-            <div class="template-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="template-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="template-preview">
                     <img src="assets/template-minimal.png" alt="Minimalist Tech Template">
                     <div class="template-overlay">
