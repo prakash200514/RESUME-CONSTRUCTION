@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="400" height="560" fill="#FFFFFF"/>
+  
+  <!-- Left Green Vertical Accent Strip -->
+  <rect x="0" y="0" width="35" height="560" fill="#65A30D"/>
+  
+  <!-- Top Green Banner -->
+  <rect x="35" y="20" width="365" height="70" fill="#F7FEE7"/>
+  
+  <text x="50" y="55" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-size="16" font-weight="800" fill="#4D7C0F">Saanvi Patel</text>
+  <text x="50" y="70" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="#65A30D">Retail Sales Associate &bull; Student</text>
+  
+  <!-- Photo on top right -->
+  <circle cx="340" cy="55" r="24" fill="#FFFFFF" stroke="#65A30D" stroke-width="1.5"/>
+  <circle cx="340" cy="50" r="9" fill="#84CC16"/>
+  <path d="M324 72 C324 62 356 62 356 72 Z" fill="#84CC16"/>
+  
+  <!-- Education Section -->
+  <circle cx="55" cy="115" r="5" fill="#65A30D"/>
+  <text x="68" y="118" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#365314">Education</text>
+  
+  <text x="68" y="136" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#1F2937">Diploma: Financial Accounting</text>
+  <text x="68" y="147" font-family="Inter, sans-serif" font-size="7" fill="#4B5563">Oxford Software Institute &amp; Oxford School of English &bull; 2023 - 2026</text>
+  
+  <!-- Skills Section with Green Dot Icons -->
+  <circle cx="55" cy="180" r="5" fill="#65A30D"/>
+  <text x="68" y="183" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#365314">Skills</text>
+  
+  <circle cx="72" cy="198" r="2" fill="#84CC16"/>
+  <text x="80" y="200" font-family="Inter, sans-serif" font-size="7" fill="#374151">Store opening and closing</text>
+  <circle cx="72" cy="212" r="2" fill="#84CC16"/>
+  <text x="80" y="214" font-family="Inter, sans-serif" font-size="7" fill="#374151">Sales expertise</text>
+  <circle cx="72" cy="226" r="2" fill="#84CC16"/>
+  <text x="80" y="228" font-family="Inter, sans-serif" font-size="7" fill="#374151">Accurate Money Handling</text>
+  <circle cx="72" cy="240" r="2" fill="#84CC16"/>
+  <text x="80" y="242" font-family="Inter, sans-serif" font-size="7" fill="#374151">Loss prevention</text>
+  
+  <!-- Work History -->
+  <circle cx="55" cy="275" r="5" fill="#65A30D"/>
+  <text x="68" y="278" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#365314">Work History</text>
+  
+  <text x="68" y="296" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#1F2937">Retail Sales Associate &bull; H&amp;M, New Delhi</text>
+  <text x="68" y="308" font-family="Inter, sans-serif" font-size="7" fill="#4B5563">2024 - Present &bull; Upsold merchandise adding ₹18,000 monthly sales.</text>
+  <text x="68" y="320" font-family="Inter, sans-serif" font-size="7" fill="#4B5563">Organized stock shelves and assisted customers with product queries.</text>
+</svg>

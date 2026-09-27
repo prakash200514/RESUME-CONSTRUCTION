@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="400" height="560" fill="#FFFFFF"/>
+  
+  <!-- Dark Charcoal Top Header Banner -->
+  <rect x="0" y="0" width="400" height="95" fill="#1E293B"/>
+  
+  <text x="30" y="48" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">Saanvi Patel</text>
+  <text x="30" y="65" font-family="Inter, sans-serif" font-size="8.5" font-weight="600" fill="#94A3B8">Retail Sales Associate &bull; Computer Student</text>
+  <text x="30" y="78" font-family="Inter, sans-serif" font-size="7" fill="#CBD5E1">+91 98765 43210 &bull; saanvi.patel@email.com &bull; New Delhi</text>
+  
+  <!-- Photo on header right -->
+  <rect x="315" y="15" width="60" height="65" rx="6" fill="#334155"/>
+  <circle cx="345" cy="40" r="14" fill="#94A3B8"/>
+  <path d="M325 72 C325 58 365 58 365 72 Z" fill="#94A3B8"/>
+  
+  <!-- Education -->
+  <text x="30" y="125" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#0F172A">Education</text>
+  <line x1="30" y1="132" x2="370" y2="132" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="30" y="150" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#1E293B">Diploma in Financial Accounting &amp; Commerce</text>
+  <text x="30" y="162" font-family="Inter, sans-serif" font-size="7.5" fill="#64748B">Oxford Software Institute &bull; 2023 - 2026</text>
+  
+  <!-- Work History -->
+  <text x="30" y="195" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#0F172A">Work Experience</text>
+  <line x1="30" y1="202" x2="370" y2="202" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="30" y="220" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#1E293B">Retail Sales Associate &bull; H&amp;M</text>
+  <text x="315" y="220" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2024 - Present</text>
+  <text x="30" y="233" font-family="Inter, sans-serif" font-size="7.5" fill="#334155">&bull; Provided customized shopping advice to 80+ customers daily.</text>
+  <text x="30" y="246" font-family="Inter, sans-serif" font-size="7.5" fill="#334155">&bull; Collaborated with merchandising team to launch seasonal promotions.</text>
+  
+  <!-- Skills Tags -->
+  <text x="30" y="280" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#0F172A">Core Competencies</text>
+  <line x1="30" y1="287" x2="370" y2="287" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="30" y="300" width="85" height="18" rx="4" fill="#F1F5F9"/>
+  <text x="37" y="312" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#1E293B">Sales Conversion</text>
+  <rect x="122" y="300" width="85" height="18" rx="4" fill="#F1F5F9"/>
+  <text x="130" y="312" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#1E293B">Cash Management</text>
+  <rect x="214" y="300" width="75" height="18" rx="4" fill="#F1F5F9"/>
+  <text x="222" y="312" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="#1E293B">Inventory Audit</text>
+</svg>

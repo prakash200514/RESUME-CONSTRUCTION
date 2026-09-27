@@ -1538,17 +1538,68 @@
         }
 
         function loadFromStorage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const modeParam = urlParams.get('mode');
+            const eduParam = urlParams.get('education');
             const saved = localStorage.getItem('auracv_user_resume_data');
-            if (saved) {
-                try {
-                    currentData = JSON.parse(saved);
-                } catch(e) {
+
+            if (modeParam === '2page' || modeParam === 'experienced') {
+                if (saved) {
+                    try {
+                        currentData = JSON.parse(saved);
+                        if (currentData.mode !== '2page') {
+                            currentData = JSON.parse(JSON.stringify(sampleExperiencedData));
+                        }
+                    } catch(e) {
+                        currentData = JSON.parse(JSON.stringify(sampleExperiencedData));
+                    }
+                } else {
+                    currentData = JSON.parse(JSON.stringify(sampleExperiencedData));
+                }
+                setResumeMode('2page');
+            } else if (modeParam === '1page' || modeParam === 'fresher' || modeParam === 'student' || modeParam === 'entry') {
+                if (saved) {
+                    try {
+                        currentData = JSON.parse(saved);
+                        if (currentData.mode !== '1page') {
+                            currentData = JSON.parse(JSON.stringify(sampleFresherData));
+                        }
+                    } catch(e) {
+                        currentData = JSON.parse(JSON.stringify(sampleFresherData));
+                    }
+                } else {
                     currentData = JSON.parse(JSON.stringify(sampleFresherData));
                 }
+                setResumeMode('1page');
             } else {
-                currentData = JSON.parse(JSON.stringify(sampleFresherData));
+                if (saved) {
+                    try {
+                        currentData = JSON.parse(saved);
+                    } catch(e) {
+                        currentData = JSON.parse(JSON.stringify(sampleFresherData));
+                    }
+                } else {
+                    currentData = JSON.parse(JSON.stringify(sampleFresherData));
+                }
+                setResumeMode(currentData.mode || '1page');
             }
-            setResumeMode(currentData.mode || '1page');
+
+            // If education level came from the student onboarding questionnaire, customize the primary degree
+            if (eduParam && currentData.education && currentData.education.length > 0) {
+                const eduMap = {
+                    'secondary': 'Higher Secondary Certificate (Class XII)',
+                    'diploma': 'Diploma: Financial Accounting & Office Automation',
+                    'internship': 'Apprenticeship / Technical Training',
+                    'associates': 'Associate Degree in Applied Sciences',
+                    'bachelors': 'Bachelor of Engineering / B.Tech Computer Science',
+                    'masters': 'Master of Computer Applications (MCA) / M.Tech',
+                    'phd': 'Doctor of Philosophy (Ph.D.) in Engineering'
+                };
+                if (eduMap[eduParam]) {
+                    currentData.education[0].degree = eduMap[eduParam];
+                }
+            }
+
             populateForm();
         }
 

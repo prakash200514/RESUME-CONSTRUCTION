@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="400" height="560" fill="#FFFFFF"/>
+  
+  <!-- Left Deep Navy Sidebar for Strategy & Competencies -->
+  <rect x="0" y="0" width="125" height="560" fill="#0A1E3F"/>
+  
+  <circle cx="62" cy="55" r="28" fill="#1E3A8A"/>
+  <circle cx="62" cy="50" r="11" fill="#93C5FD"/>
+  <path d="M44 76 C44 64 80 64 80 76 Z" fill="#93C5FD"/>
+  
+  <text x="62" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">STRATEGY &amp; SKILLS</text>
+  <line x1="15" y1="112" x2="110" y2="112" stroke="#3B82F6" stroke-width="1"/>
+  <text x="15" y="128" font-family="Inter, sans-serif" font-size="6.8" fill="#E2E8F0">&bull; P&amp;L Management</text>
+  <text x="15" y="142" font-family="Inter, sans-serif" font-size="6.8" fill="#E2E8F0">&bull; Executive Roadmaps</text>
+  <text x="15" y="156" font-family="Inter, sans-serif" font-size="6.8" fill="#E2E8F0">&bull; Enterprise Growth</text>
+  <text x="15" y="170" font-family="Inter, sans-serif" font-size="6.8" fill="#E2E8F0">&bull; Stakeholder Relations</text>
+  <text x="15" y="184" font-family="Inter, sans-serif" font-size="6.8" fill="#E2E8F0">&bull; Talent Development</text>
+  
+  <text x="62" y="220" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">EDUCATION &amp; MBA</text>
+  <line x1="15" y1="227" x2="110" y2="227" stroke="#3B82F6" stroke-width="1"/>
+  <text x="15" y="243" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#FFFFFF">MBA &bull; Finance &amp; Ops</text>
+  <text x="15" y="254" font-family="Inter, sans-serif" font-size="6.5" fill="#93C5FD">IIM Ahmedabad &bull; 2018</text>
+  
+  <!-- Right Content: Corporate Experience Timeline -->
+  <text x="145" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="800" fill="#0A1E3F">Vikramaditya Rao</text>
+  <text x="145" y="58" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#1D4ED8">CORPORATE STRATEGY DIRECTOR &bull; 8+ YEARS</text>
+  
+  <!-- 2-Page Badge -->
+  <rect x="320" y="28" width="55" height="18" rx="4" fill="#059669"/>
+  <text x="347" y="40" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#FFFFFF" text-anchor="middle">2 PAGES</text>
+  
+  <line x1="145" y1="70" x2="375" y2="70" stroke="#CBD5E1" stroke-width="1"/>
+  
+  <text x="145" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#0A1E3F">CAREER PROGRESSION</text>
+  
+  <text x="145" y="112" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Director of Corporate Strategy &bull; Tata Consultancy</text>
+  <text x="320" y="112" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2022 - Present</text>
+  <text x="145" y="124" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Headed strategic initiatives delivering ₹45 Cr new business pipeline.</text>
+  <text x="145" y="136" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Formulated digital transformation roadmap across 6 business verticals.</text>
+  
+  <text x="145" y="160" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Senior Strategy Consultant &bull; Deloitte India</text>
+  <text x="320" y="160" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2019 - 2022</text>
+  <text x="145" y="172" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Advised Fortune 500 leadership on cost governance and expansion.</text>
+  
+  <text x="145" y="196" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Corporate Development Analyst &bull; Infosys</text>
+  <text x="320" y="196" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2016 - 2019</text>
+</svg>

@@ -746,18 +746,20 @@ img {
 
 .zety-card-preview {
     width: 100%;
-    height: 380px;
-    background: #f9fafb;
+    height: 440px;
+    background: #ffffff;
     border-radius: var(--radius-sm);
     overflow: hidden;
     position: relative;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
 .zety-card-preview img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
     transition: transform 0.4s ease;
 }
 
@@ -831,6 +833,25 @@ img {
     white-space: nowrap;
 }
 
+/* 2-Page Experienced Badge */
+.experienced-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #dbeafe;
+    color: #1e40af;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.85rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    z-index: 4;
+    white-space: nowrap;
+    border: 1px solid #bfdbfe;
+}
+
 /* Color Swatches Container (Image 1 & 5) */
 .color-swatches {
     display: flex;
@@ -884,6 +905,51 @@ img {
 .templates-page-header p {
     font-size: 1.05rem;
     color: var(--text-muted);
+}
+
+/* Template Category Tabs Switcher */
+.template-tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.template-category-switch {
+    display: inline-flex;
+    background: #f1f5f9;
+    padding: 6px;
+    border-radius: 9999px;
+    border: 1px solid #e2e8f0;
+    gap: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.tab-pill-btn {
+    padding: 0.7rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    color: #475569;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tab-pill-btn:hover {
+    color: #0f172a;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.tab-pill-btn.active {
+    background: #0d235c !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(13, 35, 92, 0.25);
 }
 
 .templates-catalog-layout {
@@ -1332,10 +1398,79 @@ img {
 }
 
 .exp-student-btn.active {
+    background: #0d235c !important;
+    border-color: #0d235c !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(13, 35, 92, 0.25);
+}
+
+/* Question 3: What education level are you currently pursuing? (Uploaded Screenshot) */
+.exp-education-section {
+    display: none;
+    margin-top: 3.5rem;
+    animation: fadeInSlide 0.35s ease forwards;
+}
+
+.exp-education-section.visible {
+    display: block;
+}
+
+.exp-education-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.02em;
+}
+
+.exp-education-desc {
+    font-size: 1.05rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.exp-education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.exp-edu-card {
+    min-height: 76px;
+    border: 1.5px solid #a3b2c2;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 0.96rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+.exp-edu-card:hover {
     border-color: #185adb;
-    background: #eff6ff;
-    color: #185adb;
-    box-shadow: 0 0 0 2px #185adb;
+    background: #f8faff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(24, 90, 219, 0.1);
+}
+
+.exp-edu-card.active {
+    background: #0d235c !important;
+    border-color: #0d235c !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(13, 35, 92, 0.25);
+}
+
+.exp-edu-card.span-center {
+    grid-column: 2;
 }
 
 .exp-footer {

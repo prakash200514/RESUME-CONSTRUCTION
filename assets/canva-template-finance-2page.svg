@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="400" height="560" fill="#FFFFFF"/>
+  
+  <!-- Left Accent Navy Stripe -->
+  <rect x="0" y="0" width="8" height="560" fill="#0D235C"/>
+  
+  <!-- Top Header Block -->
+  <rect x="25" y="20" width="355" height="75" fill="#F8FAFC" rx="4" stroke="#E2E8F0" stroke-width="1"/>
+  
+  <text x="45" y="48" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-size="16" font-weight="800" fill="#0F172A">DAVID THORNE, CFA</text>
+  <text x="45" y="63" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#185ADB">VP FINANCIAL CONTROLLER &amp; RISK &bull; 9+ YEARS EXPERIENCE</text>
+  <text x="45" y="78" font-family="Inter, sans-serif" font-size="7" fill="#64748B">david.thorne@financegroup.com &bull; +91 98765 88990 &bull; Mumbai, India</text>
+  
+  <!-- 2-Page Badge Indicator -->
+  <rect x="305" y="32" width="65" height="20" rx="4" fill="#0D235C"/>
+  <text x="337" y="46" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#FFFFFF" text-anchor="middle">PAGE 1 OF 2</text>
+  
+  <!-- Executive Profile -->
+  <text x="25" y="118" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#0D235C">EXECUTIVE PROFILE</text>
+  <line x1="25" y1="124" x2="380" y2="124" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="25" y="140" font-family="Inter, sans-serif" font-size="7.5" fill="#334155">Chartered Financial Analyst with 9+ years managing enterprise risk, capital allocation,</text>
+  <text x="25" y="152" font-family="Inter, sans-serif" font-size="7.5" fill="#334155">and regulatory governance for multi-asset corporate funds exceeding ₹85 Cr AUM.</text>
+  
+  <!-- Professional History -->
+  <text x="25" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#0D235C">CAREER PROGRESSION (9+ YEARS)</text>
+  <line x1="25" y1="186" x2="380" y2="186" stroke="#CBD5E1" stroke-width="1.5"/>
+  
+  <text x="25" y="204" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">VP &amp; Financial Controller &bull; Standard Capital Securities</text>
+  <text x="315" y="204" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2021 - Present</text>
+  <text x="25" y="217" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Administered liquidity governance across 6 business divisions, optimizing capital return by 19%.</text>
+  <text x="25" y="229" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Structured corporate treasury hedge strategies reducing foreign exchange variance by ₹4.2 Cr.</text>
+  
+  <text x="25" y="252" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Senior Risk Analyst &bull; HDFC Securities Ltd</text>
+  <text x="315" y="252" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2018 - 2021</text>
+  <text x="25" y="265" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Modeled VaR algorithms for derivatives desk, achieving zero audit observations over 3 fiscal years.</text>
+  
+  <text x="25" y="288" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Investment Analyst &bull; Kotak Mahindra Capital</text>
+  <text x="315" y="288" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2015 - 2018</text>
+  
+  <!-- Financial Metrics & Highlights -->
+  <text x="25" y="324" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#0D235C">PORTFOLIO &amp; RISK BENCHMARKS</text>
+  <line x1="25" y1="330" x2="380" y2="330" stroke="#CBD5E1" stroke-width="1.5"/>
+  
+  <rect x="25" y="342" width="108" height="30" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="79" y="356" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#0D235C" text-anchor="middle">₹85 Cr AUM</text>
+  <text x="79" y="366" font-family="Inter, sans-serif" font-size="6.5" fill="#64748B" text-anchor="middle">Capital Allocated</text>
+  
+  <rect x="145" y="342" width="108" height="30" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="199" y="356" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#16A34A" text-anchor="middle">100% Compliance</text>
+  <text x="199" y="366" font-family="Inter, sans-serif" font-size="6.5" fill="#64748B" text-anchor="middle">RBI / SEBI Audits</text>
+  
+  <rect x="265" y="342" width="115" height="30" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="322" y="356" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#185ADB" text-anchor="middle">₹4.2 Cr Saved</text>
+  <text x="322" y="366" font-family="Inter, sans-serif" font-size="6.5" fill="#64748B" text-anchor="middle">FX Hedge Optimization</text>
+</svg>

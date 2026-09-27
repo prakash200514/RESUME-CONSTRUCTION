@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="400" height="560" fill="#FFFFFF"/>
+  
+  <!-- Top Executive Navy Band -->
+  <rect x="0" y="0" width="400" height="85" fill="#0F2748"/>
+  
+  <text x="30" y="40" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-size="17" font-weight="800" fill="#FFFFFF">ALEXANDER MORGAN</text>
+  <text x="30" y="56" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#93C5FD">SENIOR OPERATIONS MANAGER &bull; 6+ YEARS EXPERIENCE</text>
+  <text x="30" y="70" font-family="Inter, sans-serif" font-size="7" fill="#CBD5E1">alexander.morgan@company.com &bull; +91 98765 12345 &bull; Bangalore, India</text>
+  
+  <!-- 2-Page Badge Indicator -->
+  <rect x="315" y="18" width="60" height="20" rx="4" fill="#2563EB"/>
+  <text x="345" y="32" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">PAGE 1 OF 2</text>
+  
+  <!-- Executive Summary -->
+  <text x="30" y="112" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#0F2748">EXECUTIVE SUMMARY</text>
+  <line x1="30" y1="118" x2="370" y2="118" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="30" y="134" font-family="Inter, sans-serif" font-size="7.5" fill="#334155">Accomplished Operations Leader with 6+ years driving cross-functional efficiency, P&amp;L</text>
+  <text x="30" y="146" font-family="Inter, sans-serif" font-size="7.5" fill="#334155">optimization, and scaling operations across multi-site regional facilities.</text>
+  
+  <!-- Professional Experience (Multi-Role Progression) -->
+  <text x="30" y="175" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#0F2748">PROFESSIONAL EXPERIENCE (6+ YEARS)</text>
+  <line x1="30" y1="181" x2="370" y2="181" stroke="#CBD5E1" stroke-width="1.5"/>
+  
+  <text x="30" y="200" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Senior Operations Manager &bull; Apex Logistics Corp</text>
+  <text x="305" y="200" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2023 - Present</text>
+  <text x="30" y="213" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Led 45-person operations division across 3 fulfillment hubs, reducing delivery SLA by 28%.</text>
+  <text x="30" y="225" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Managed ₹12 Cr annual operating budget, achieving 14% cost containment.</text>
+  
+  <text x="30" y="248" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Operations Team Lead &bull; Metro Distribution India</text>
+  <text x="305" y="248" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2020 - 2023</text>
+  <text x="30" y="261" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Supervised team of 18 inventory specialists, driving 99.4% order fulfillment accuracy.</text>
+  
+  <text x="30" y="284" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Supply Chain Associate &bull; Reliance Retail</text>
+  <text x="305" y="284" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2018 - 2020</text>
+  
+  <!-- Key Metrics & Accomplishments -->
+  <text x="30" y="320" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#0F2748">KEY LEADERSHIP ACCOMPLISHMENTS</text>
+  <line x1="30" y1="326" x2="370" y2="326" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="30" y="340" width="105" height="28" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="82" y="353" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#185ADB" text-anchor="middle">₹12 Cr Budget</text>
+  <text x="82" y="363" font-family="Inter, sans-serif" font-size="6.5" fill="#3B82F6" text-anchor="middle">Managed &amp; Optimized</text>
+  
+  <rect x="145" y="340" width="105" height="28" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="197" y="353" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#16A34A" text-anchor="middle">45+ Team Size</text>
+  <text x="197" y="363" font-family="Inter, sans-serif" font-size="6.5" fill="#22C55E" text-anchor="middle">Direct Leadership</text>
+  
+  <rect x="260" y="340" width="105" height="28" rx="6" fill="#FAF5FF" stroke="#E9D5FF" stroke-width="1"/>
+  <text x="312" y="353" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#9333EA" text-anchor="middle">28% Efficiency</text>
+  <text x="312" y="363" font-family="Inter, sans-serif" font-size="6.5" fill="#A855F7" text-anchor="middle">SLA Turnaround</text>
+</svg>

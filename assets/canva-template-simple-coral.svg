@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="400" height="560" fill="#FFFFFF"/>
+  
+  <!-- Minimal Header with Photo on Top Right -->
+  <text x="35" y="45" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-size="16" font-weight="800" fill="#111827">Saanvi Patel</text>
+  <text x="35" y="60" font-family="Inter, sans-serif" font-size="8.5" font-weight="600" fill="#6B7280">Retail Sales Associate &bull; Student</text>
+  <text x="35" y="73" font-family="Inter, sans-serif" font-size="7" fill="#9CA3AF">+91 98765 43210 &bull; saanvi.patel@email.com &bull; New Delhi</text>
+  
+  <!-- Photo on top right -->
+  <circle cx="340" cy="50" r="22" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <circle cx="340" cy="45" r="9" fill="#DC2626"/>
+  <path d="M325 67 C325 56 355 56 355 67 Z" fill="#DC2626"/>
+  
+  <line x1="35" y1="88" x2="365" y2="88" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <!-- Education with Coral Circular Icon -->
+  <circle cx="43" cy="112" r="8" fill="#EF4444"/>
+  <path d="M39 112L42 115L47 109" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="115" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#111827">Education</text>
+  
+  <text x="58" y="134" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#1F2937">Diploma: Financial Accounting, 09/2026</text>
+  <text x="58" y="146" font-family="Inter, sans-serif" font-size="7.5" fill="#6B7280">Oxford Software Institute &bull; Oxford School of English &bull; New Delhi</text>
+  
+  <!-- Work History with Coral Circular Icon -->
+  <circle cx="43" cy="180" r="8" fill="#EF4444"/>
+  <path d="M39 180L42 183L47 177" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="183" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#111827">Work History</text>
+  
+  <text x="58" y="202" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#1F2937">Retail Sales Associate &bull; H&amp;M</text>
+  <text x="315" y="202" font-family="Inter, sans-serif" font-size="7" fill="#6B7280">2024 - Present</text>
+  <text x="58" y="215" font-family="Inter, sans-serif" font-size="7.5" fill="#4B5563">&bull; Recommended matching accessories and upselling additions to elevate basket value.</text>
+  <text x="58" y="228" font-family="Inter, sans-serif" font-size="7.5" fill="#4B5563">&bull; Trained 4 new cashier associates on POS and inventory returns system.</text>
+  
+  <!-- Skills with Coral Icon -->
+  <circle cx="43" cy="260" r="8" fill="#EF4444"/>
+  <path d="M39 260L42 263L47 257" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="263" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#111827">Skills</text>
+  
+  <text x="58" y="282" font-family="Inter, sans-serif" font-size="7.5" fill="#374151">&bull; Customer Service</text>
+  <text x="180" y="282" font-family="Inter, sans-serif" font-size="7.5" fill="#374151">&bull; POS Management</text>
+  <text x="58" y="296" font-family="Inter, sans-serif" font-size="7.5" fill="#374151">&bull; Merchandise Audit</text>
+  <text x="180" y="296" font-family="Inter, sans-serif" font-size="7.5" fill="#374151">&bull; Communication</text>
+</svg>

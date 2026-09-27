@@ -44,7 +44,7 @@
                     </div>
                 <?php else: ?>
                     <a href="auth.php" class="btn btn-outline-dark" style="padding: 0.55rem 1.3rem;">Sign In</a>
-                    <button class="btn btn-amber open-wizard-btn" style="padding: 0.55rem 1.4rem;">Create Resume</button>
+                    <a href="experience-level.php" class="btn btn-amber" style="padding: 0.55rem 1.4rem;">Create Resume</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -63,7 +63,7 @@
                     Whether you want to build a new resume from scratch or improve an existing one, let AuraCV help you present your work life, personality, and skills on a resume that stands out.
                 </p>
                 <div class="zety-intro-actions">
-                    <button class="btn-zety-amber open-wizard-btn">Create new resume</button>
+                    <a href="experience-level.php" class="btn-zety-amber">Create new resume</a>
                     <a href="templates.php" class="btn-zety-outline">Improve my resume</a>
                 </div>
             </div>
@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="process-top-cta" style="margin-bottom: 0;">
-                    <button class="btn btn-amber open-wizard-btn">Create new resume</button>
+                    <a href="experience-level.php" class="btn btn-amber">Create new resume</a>
                     <a href="templates.php" class="btn btn-outline-dark">Improve my resume</a>
                 </div>
 
@@ -167,9 +167,9 @@
                     </div>
 
                     <div class="hero-cta-box">
-                        <button class="btn btn-amber btn-large open-wizard-btn" style="min-width: 280px; font-size: 1.15rem;">
+                        <a href="experience-level.php" class="btn btn-amber btn-large" style="min-width: 280px; font-size: 1.15rem; display:inline-flex;">
                             Create My Resume
-                        </button>
+                        </a>
                         <p class="terms-note">
                             By clicking Create My Resume, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
                         </p>
@@ -240,64 +240,60 @@
 
                 <div class="templates-showcase-row">
 
-                    <!-- Template 1: Classic Academic -->
+                    <!-- Template 1: Cascade (Canva Style) -->
                     <div class="zety-template-card active" data-template="classic">
                         <div class="zety-card-preview" id="preview-card-1">
-                            <img src="assets/template-classic.png" alt="Classic Academic Template">
+                            <img src="assets/canva-template-cascade.svg" alt="Cascade Student Template (Canva Style)">
                             <div class="zety-card-overlay">
-                                <a href="builder.php?template=classic" class="btn btn-blue">Use this template</a>
+                                <a href="builder.php?template=classic&mode=1page" class="btn btn-blue">Use this template</a>
                             </div>
                             <span class="recommended-badge">RECOMMENDED</span>
-                            <a href="builder.php?template=classic" class="zoom-btn" title="Preview">&#43;</a>
+                            <a href="builder.php?template=classic&mode=1page" class="zoom-btn" title="Preview">&#43;</a>
                         </div>
                         <div class="color-swatches" data-target="preview-card-1">
                             <span class="swatch-dot dot-navy active" title="Navy" data-color="#1e3a8a"></span>
-                            <span class="swatch-dot dot-blue" title="Royal Blue" data-color="#2563eb"></span>
-                            <span class="swatch-dot dot-teal" title="Teal" data-color="#0d9488"></span>
-                            <span class="swatch-dot dot-purple" title="Purple" data-color="#7c3aed"></span>
-                            <span class="swatch-dot dot-orange" title="Orange" data-color="#ea580c"></span>
                             <span class="swatch-dot dot-green" title="Green" data-color="#16a34a"></span>
+                            <span class="swatch-dot dot-orange" title="Orange" data-color="#ea580c"></span>
+                            <span class="swatch-dot dot-purple" title="Purple" data-color="#7c3aed"></span>
+                            <span class="swatch-dot dot-blue" title="Royal Blue" data-color="#2563eb"></span>
                             <span class="swatch-dot dot-rainbow" title="Custom" data-color="rainbow"></span>
                         </div>
                     </div>
 
-                    <!-- Template 2: Minimal Tech -->
-                    <div class="zety-template-card" data-template="minimal">
+                    <!-- Template 2: Concept (Canva Style) -->
+                    <div class="zety-template-card" data-template="concept">
                         <div class="zety-card-preview" id="preview-card-2">
-                            <img src="assets/template-minimal.png" alt="Minimal Tech Template">
+                            <img src="assets/canva-template-concept.svg" alt="Concept Student Template (Canva Style)">
                             <div class="zety-card-overlay">
-                                <a href="builder.php?template=minimal" class="btn btn-blue">Use this template</a>
+                                <a href="builder.php?template=classic&mode=1page" class="btn btn-blue">Use this template</a>
                             </div>
-                            <a href="builder.php?template=minimal" class="zoom-btn" title="Preview">&#43;</a>
+                            <span class="recommended-badge">RECOMMENDED</span>
+                            <a href="builder.php?template=classic&mode=1page" class="zoom-btn" title="Preview">&#43;</a>
                         </div>
                         <div class="color-swatches" data-target="preview-card-2">
-                            <span class="swatch-dot dot-navy" title="Navy" data-color="#1e3a8a"></span>
-                            <span class="swatch-dot dot-blue active" title="Royal Blue" data-color="#2563eb"></span>
-                            <span class="swatch-dot dot-teal" title="Teal" data-color="#0d9488"></span>
-                            <span class="swatch-dot dot-purple" title="Purple" data-color="#7c3aed"></span>
-                            <span class="swatch-dot dot-orange" title="Orange" data-color="#ea580c"></span>
-                            <span class="swatch-dot dot-green" title="Green" data-color="#16a34a"></span>
+                            <span class="swatch-dot dot-navy active" title="Dark Slate" data-color="#1e293b"></span>
+                            <span class="swatch-dot dot-green" title="Green" data-color="#15803d"></span>
+                            <span class="swatch-dot dot-purple" title="Purple" data-color="#6b21a8"></span>
+                            <span class="swatch-dot dot-blue" title="Navy" data-color="#0f172a"></span>
                             <span class="swatch-dot dot-rainbow" title="Custom" data-color="rainbow"></span>
                         </div>
                     </div>
 
-                    <!-- Template 3: Modern Clean -->
-                    <div class="zety-template-card" data-template="modern">
+                    <!-- Template 3: Primo (Canva Style) -->
+                    <div class="zety-template-card" data-template="primo">
                         <div class="zety-card-preview" id="preview-card-3">
-                            <img src="assets/template-modern.png" alt="Modern Template">
+                            <img src="assets/canva-template-primo.svg" alt="Primo Student Template (Canva Style)">
                             <div class="zety-card-overlay">
-                                <a href="builder.php?template=classic" class="btn btn-blue">Use this template</a>
+                                <a href="builder.php?template=classic&mode=1page" class="btn btn-blue">Use this template</a>
                             </div>
-                            <span class="recommended-badge" style="background:#fef3c7; color:#b45309;">POPULAR</span>
-                            <a href="builder.php?template=classic" class="zoom-btn" title="Preview">&#43;</a>
+                            <span class="recommended-badge">RECOMMENDED</span>
+                            <a href="builder.php?template=classic&mode=1page" class="zoom-btn" title="Preview">&#43;</a>
                         </div>
                         <div class="color-swatches" data-target="preview-card-3">
-                            <span class="swatch-dot dot-navy" title="Navy" data-color="#1e3a8a"></span>
+                            <span class="swatch-dot dot-green active" title="Olive Green" data-color="#65a30d"></span>
+                            <span class="swatch-dot dot-teal" title="Aqua" data-color="#06b6d4"></span>
+                            <span class="swatch-dot dot-orange" title="Orange" data-color="#f97316"></span>
                             <span class="swatch-dot dot-blue" title="Royal Blue" data-color="#2563eb"></span>
-                            <span class="swatch-dot dot-teal active" title="Teal" data-color="#0d9488"></span>
-                            <span class="swatch-dot dot-purple" title="Purple" data-color="#7c3aed"></span>
-                            <span class="swatch-dot dot-orange" title="Orange" data-color="#ea580c"></span>
-                            <span class="swatch-dot dot-green" title="Green" data-color="#16a34a"></span>
                             <span class="swatch-dot dot-rainbow" title="Custom" data-color="rainbow"></span>
                         </div>
                     </div>

@@ -59,8 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update sticky button href if present
             const templateSlug = card.getAttribute('data-template') || 'classic';
+            const mode = card.getAttribute('data-mode') || (typeof currentCategory !== 'undefined' && currentCategory === 'experienced' ? '2page' : '1page');
             if (stickyBtn) {
-                stickyBtn.href = `builder.php?template=${templateSlug}`;
+                stickyBtn.href = `builder.php?template=${templateSlug}&mode=${mode}`;
             }
         });
     });
@@ -73,29 +74,35 @@ document.addEventListener('DOMContentLoaded', () => {
     function applyCatalogFilters() {
         if (!catalogCards.length) return;
 
+        const activeCat = typeof currentCategory !== 'undefined' ? currentCategory : 'student';
         const selectedHeadshot = Array.from(document.querySelectorAll('input[name="headshot"]:checked')).map(cb => cb.value);
         const selectedColumns = Array.from(document.querySelectorAll('input[name="columns"]:checked')).map(cb => cb.value);
         const selectedStyle = Array.from(document.querySelectorAll('input[name="style"]:checked')).map(cb => cb.value);
-        const selectedLevel = Array.from(document.querySelectorAll('input[name="level"]:checked')).map(cb => cb.value);
 
         catalogCards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (cardCat && cardCat !== activeCat) {
+                card.style.display = 'none';
+                return;
+            }
+
             const cardHeadshot = card.getAttribute('data-headshot');
             const cardColumns = card.getAttribute('data-columns');
             const cardStyle = card.getAttribute('data-style');
-            const cardLevel = card.getAttribute('data-level');
 
             const matchHeadshot = selectedHeadshot.length === 0 || selectedHeadshot.includes(cardHeadshot);
             const matchColumns = selectedColumns.length === 0 || selectedColumns.includes(cardColumns);
             const matchStyle = selectedStyle.length === 0 || selectedStyle.includes(cardStyle);
-            const matchLevel = selectedLevel.length === 0 || selectedLevel.includes(cardLevel);
 
-            if (matchHeadshot && matchColumns && matchStyle && matchLevel) {
+            if (matchHeadshot && matchColumns && matchStyle) {
                 card.style.display = 'flex';
             } else {
                 card.style.display = 'none';
             }
         });
     }
+
+    window.applyCatalogFilters = applyCatalogFilters;
 
     filterCheckboxes.forEach(cb => {
         cb.addEventListener('change', applyCatalogFilters);

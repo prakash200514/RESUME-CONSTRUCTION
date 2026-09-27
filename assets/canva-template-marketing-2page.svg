@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="400" height="560" fill="#FFFFFF"/>
+  
+  <!-- Top Rose-Wine Header Banner -->
+  <rect x="0" y="0" width="400" height="85" fill="#881337"/>
+  
+  <text x="30" y="38" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">RACHEL GREEN</text>
+  <text x="30" y="54" font-family="Inter, sans-serif" font-size="8.5" font-weight="600" fill="#FECDD3">VP MARKETING &amp; GROWTH &bull; 8+ YEARS EXPERIENCE</text>
+  <text x="30" y="68" font-family="Inter, sans-serif" font-size="7" fill="#FFE4E6">rachel.green@brandgrowth.com &bull; +91 98765 66778 &bull; Delhi NCR, India</text>
+  
+  <!-- 2-Page Badge Indicator -->
+  <rect x="315" y="20" width="60" height="20" rx="4" fill="#BE123C"/>
+  <text x="345" y="34" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">PAGE 1 OF 2</text>
+  
+  <!-- Executive Summary -->
+  <text x="30" y="112" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#881337">EXECUTIVE SUMMARY</text>
+  <line x1="30" y1="118" x2="370" y2="118" stroke="#FECDD3" stroke-width="1.5"/>
+  <text x="30" y="134" font-family="Inter, sans-serif" font-size="7.5" fill="#334155">Growth Marketing Executive with 8+ years scaling omni-channel acquisition funnels,</text>
+  <text x="30" y="146" font-family="Inter, sans-serif" font-size="7.5" fill="#334155">managing ₹18 Cr performance budgets, and accelerating ARR from Series A to C.</text>
+  
+  <!-- Experience -->
+  <text x="30" y="175" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#881337">EXPERIENCE &amp; ACHIEVEMENTS (8+ YEARS)</text>
+  <line x1="30" y1="181" x2="370" y2="181" stroke="#FECDD3" stroke-width="1.5"/>
+  
+  <text x="30" y="200" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Vice President of Growth &bull; NextGen Commerce</text>
+  <text x="305" y="200" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2021 - Present</text>
+  <text x="30" y="213" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Architected paid acquisition &amp; SEO strategy generating ₹48 Cr inbound sales pipeline.</text>
+  <text x="30" y="225" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Improved blended CAC by 34% while increasing customer Lifetime Value (LTV) to 4.8x.</text>
+  
+  <text x="30" y="248" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Head of Performance Marketing &bull; Urban Lifestyle</text>
+  <text x="305" y="248" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2018 - 2021</text>
+  <text x="30" y="261" font-family="Inter, sans-serif" font-size="7" fill="#334155">&bull; Managed team of 12 marketers across SEM, Paid Social, Email Automation, and Brand PR.</text>
+  
+  <text x="30" y="284" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" fill="#0F172A">Digital Marketing Specialist &bull; Ogilvy &amp; Mather</text>
+  <text x="305" y="284" font-family="Inter, sans-serif" font-size="7" fill="#64748B">2016 - 2018</text>
+  
+  <!-- Metrics -->
+  <text x="30" y="320" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#881337">MEASURABLE GROWTH METRICS</text>
+  <line x1="30" y1="326" x2="370" y2="326" stroke="#FECDD3" stroke-width="1.5"/>
+  
+  <rect x="30" y="340" width="105" height="28" rx="6" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1"/>
+  <text x="82" y="353" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#BE123C" text-anchor="middle">₹48 Cr ARR</text>
+  <text x="82" y="363" font-family="Inter, sans-serif" font-size="6.5" fill="#E11D48" text-anchor="middle">Pipeline Generated</text>
+  
+  <rect x="145" y="340" width="105" height="28" rx="6" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1"/>
+  <text x="197" y="353" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#BE123C" text-anchor="middle">3.4x ROAS</text>
+  <text x="197" y="363" font-family="Inter, sans-serif" font-size="6.5" fill="#E11D48" text-anchor="middle">Campaign Efficiency</text>
+  
+  <rect x="260" y="340" width="105" height="28" rx="6" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1"/>
+  <text x="312" y="353" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#BE123C" text-anchor="middle">-34% CAC</text>
+  <text x="312" y="363" font-family="Inter, sans-serif" font-size="6.5" fill="#E11D48" text-anchor="middle">Cost Acquisition Lift</text>
+</svg>
