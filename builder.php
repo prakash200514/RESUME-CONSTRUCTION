@@ -26,14 +26,14 @@
             background: rgba(10, 10, 11, 0.95);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--surface-border);
-            padding: 0.75rem 1.5rem;
+            padding: 0.7rem 1.5rem;
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .builder-nav {
-            max-width: 1500px;
+            max-width: 1600px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -47,6 +47,41 @@
             align-items: center;
             gap: 0.6rem;
             flex-wrap: wrap;
+        }
+
+        /* Mode Switcher (1-Page Fresher vs 2-Page Experienced) */
+        .mode-switch-group {
+            display: flex;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--surface-border);
+            border-radius: 10px;
+            padding: 3px;
+            gap: 4px;
+        }
+
+        .btn-mode {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.45rem 0.9rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-mode:hover {
+            color: #ffffff;
+        }
+
+        .btn-mode.active {
+            background: var(--gradient);
+            color: #ffffff;
+            box-shadow: 0 2px 10px var(--primary-glow);
         }
 
         /* Workspace Grid: Form on Left, Live Preview on Right */
@@ -85,8 +120,12 @@
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--surface-border);
             border-radius: 12px;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.15rem;
             overflow: hidden;
+        }
+
+        .form-section.highlight-experienced {
+            border-color: rgba(14, 165, 233, 0.4);
         }
 
         .form-section-title {
@@ -229,6 +268,7 @@
             flex-direction: column;
             align-items: center;
             min-width: 0;
+            gap: 2rem;
         }
 
         .preview-controls-bar {
@@ -237,13 +277,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 0.75rem;
             padding: 0.5rem 0.75rem;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--surface-border);
             border-radius: 10px;
             color: var(--text-muted);
             font-size: 0.85rem;
+        }
+
+        /* Page Container with Page Tag */
+        .page-sheet-container {
+            width: 850px;
+            max-width: 100%;
+            position: relative;
+        }
+
+        .page-indicator-tag {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--surface-border);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 0.5rem;
         }
 
         /* The Printed A4 Resume Sheet */
@@ -253,7 +311,7 @@
             width: 850px;
             max-width: 100%;
             min-height: 1100px;
-            padding: 40px 48px;
+            padding: 38px 45px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
             border-radius: 2px;
             box-sizing: border-box;
@@ -270,9 +328,34 @@
             border-bottom: 2px solid #222;
         }
 
+        /* Page 2 Mini Header */
+        .classic-page2-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #222;
+        }
+
+        .classic-page2-name {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #111;
+            text-transform: uppercase;
+        }
+
+        .classic-page2-contact {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 11.5px;
+            color: #444;
+        }
+
         .classic-photo-container {
-            width: 110px;
-            height: 135px;
+            width: 105px;
+            height: 130px;
             border: 1.5px solid #222;
             overflow: hidden;
             background: #f1f5f9;
@@ -313,18 +396,18 @@
 
         .classic-name {
             font-family: 'Merriweather', Georgia, serif;
-            font-size: 24px;
+            font-size: 23px;
             font-weight: 700;
             letter-spacing: 0.5px;
             color: #111;
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             line-height: 1.2;
         }
 
         .classic-address {
             font-family: 'Inter', system-ui, sans-serif;
-            font-size: 13.5px;
+            font-size: 13px;
             color: #222;
             line-height: 1.45;
             white-space: pre-line;
@@ -333,7 +416,7 @@
         .classic-contact {
             text-align: right;
             font-family: 'Inter', system-ui, sans-serif;
-            font-size: 13.5px;
+            font-size: 13px;
             color: #222;
             line-height: 1.5;
             flex-shrink: 0;
@@ -345,7 +428,7 @@
             display: flex;
             width: 100%;
             border-bottom: 1.5px solid #222;
-            padding: 10px 0;
+            padding: 9px 0;
             box-sizing: border-box;
         }
 
@@ -356,7 +439,7 @@
             font-family: 'Merriweather', Georgia, serif;
             font-style: italic;
             font-weight: 700;
-            font-size: 15.5px;
+            font-size: 15px;
             color: #111;
             line-height: 1.25;
             box-sizing: border-box;
@@ -365,16 +448,52 @@
         .classic-col-content {
             width: 75%;
             font-family: 'Inter', system-ui, sans-serif;
-            font-size: 13px;
+            font-size: 12.5px;
             color: #1a1a1a;
             line-height: 1.45;
             box-sizing: border-box;
             white-space: pre-line;
         }
 
+        /* Work Experience Entry */
+        .exp-entry {
+            margin-bottom: 11px;
+        }
+        .exp-entry:last-child {
+            margin-bottom: 0;
+        }
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        .exp-company {
+            font-family: 'Merriweather', Georgia, serif;
+            font-weight: 700;
+            font-size: 13px;
+            color: #111;
+        }
+        .exp-duration {
+            font-size: 12px;
+            color: #333;
+            font-weight: 600;
+        }
+        .exp-role {
+            font-style: italic;
+            font-size: 12.5px;
+            color: #222;
+            margin-bottom: 3px;
+        }
+        .exp-desc {
+            font-size: 12px;
+            color: #333;
+            line-height: 1.4;
+        }
+
         /* Education Entry */
         .edu-entry {
-            margin-bottom: 10px;
+            margin-bottom: 9px;
         }
         .edu-entry:last-child {
             margin-bottom: 0;
@@ -383,21 +502,21 @@
             font-family: 'Merriweather', Georgia, serif;
             font-weight: 700;
             font-style: italic;
-            font-size: 13.5px;
+            font-size: 13px;
             color: #111;
         }
         .edu-degree {
-            font-size: 12.5px;
+            font-size: 12px;
             color: #333;
         }
         .edu-year {
-            font-size: 12.5px;
+            font-size: 12px;
             color: #333;
         }
 
         /* Project Entry */
         .project-entry {
-            margin-bottom: 12px;
+            margin-bottom: 11px;
         }
         .project-entry:last-child {
             margin-bottom: 0;
@@ -405,16 +524,16 @@
         .project-heading {
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 13px;
+            font-size: 12.5px;
             color: #111;
             margin-bottom: 2px;
         }
         .project-tech {
-            font-size: 12.5px;
-            margin-bottom: 3px;
+            font-size: 12px;
+            margin-bottom: 2px;
         }
         .project-desc {
-            font-size: 12.5px;
+            font-size: 12px;
             color: #333;
             line-height: 1.4;
         }
@@ -428,8 +547,8 @@
         .diamond-list li {
             position: relative;
             padding-left: 0;
-            margin-bottom: 4px;
-            font-size: 13px;
+            margin-bottom: 3.5px;
+            font-size: 12.5px;
             color: #222;
         }
         .diamond-list li:last-child {
@@ -482,6 +601,7 @@
             .builder-header,
             .form-panel,
             .preview-controls-bar,
+            .page-indicator-tag,
             .bg-mesh,
             .toast,
             .photo-overlay {
@@ -495,14 +615,30 @@
             .preview-panel {
                 width: 100% !important;
                 display: block !important;
+                gap: 0 !important;
+            }
+            .page-sheet-container {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             .resume-sheet {
                 box-shadow: none !important;
                 border-radius: 0 !important;
                 width: 100% !important;
                 max-width: 100% !important;
-                padding: 10mm 15mm !important;
+                padding: 12mm 15mm !important;
                 margin: 0 auto !important;
+                min-height: auto !important;
+            }
+            /* Page Breaks */
+            .page-sheet-container.page-1 {
+                break-after: page !important;
+                page-break-after: always !important;
+            }
+            .page-sheet-container.page-2 {
+                break-before: page !important;
+                page-break-before: always !important;
             }
             @page {
                 size: A4 portrait;
@@ -518,16 +654,23 @@
     <header class="builder-header">
         <div class="builder-nav">
             <div style="display: flex; align-items: center; gap: 0.8rem;">
-                <a href="templates.php" class="btn btn-outline" style="padding: 0.45rem 0.9rem; font-size: 0.88rem;">
+                <a href="templates.php" class="btn btn-outline" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
                     &larr; Back to Templates
                 </a>
                 <a href="index.php" class="logo" style="text-decoration: none; color: inherit;">
                     <span class="logo-icon"></span>
                     <span class="logo-text">Aura<span>CV</span></span>
                 </a>
-                <span class="badge" style="margin: 0; background: rgba(255,255,255,0.08); color: var(--text-main); font-size: 0.8rem;">
-                    Template: Classic Academic
-                </span>
+            </div>
+
+            <!-- 1 Page vs 2 Page Toggle -->
+            <div class="mode-switch-group">
+                <button type="button" class="btn-mode active" id="btn-mode-1page" onclick="setResumeMode('1page')">
+                    🎓 1 Page (Fresher)
+                </button>
+                <button type="button" class="btn-mode" id="btn-mode-2page" onclick="setResumeMode('2page')">
+                    💼 2 Pages (Experienced)
+                </button>
             </div>
 
             <div class="builder-actions">
@@ -556,8 +699,8 @@
         <!-- ==================== LEFT: STRUCTURED INPUT FORM ==================== -->
         <aside class="form-panel" id="form-panel">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-                <h3 style="font-size: 1.15rem; color: var(--text-main);">Resume Details Form</h3>
-                <span style="font-size: 0.75rem; color: var(--text-muted);">Real-time Auto Sync</span>
+                <h3 style="font-size: 1.15rem; color: var(--text-main);" id="form-panel-title">Fresher Resume Details</h3>
+                <span style="font-size: 0.75rem; color: var(--text-muted);" id="form-panel-mode-badge">1-Page Mode</span>
             </div>
 
             <!-- 1. PERSONAL INFO -->
@@ -605,21 +748,35 @@
                 </div>
             </div>
 
-            <!-- 2. CAREER OBJECTIVE -->
+            <!-- 2. CAREER OBJECTIVE / PROFESSIONAL SUMMARY -->
             <div class="form-section">
                 <div class="form-section-title" onclick="toggleSection(this)">
-                    <span>🎯 Career Objective</span>
+                    <span id="label-objective-title">🎯 Career Objective</span>
                     <span>▾</span>
                 </div>
                 <div class="form-section-body">
                     <div class="field-group">
-                        <label>Objective Statement</label>
+                        <label id="label-objective-field">Objective Statement</label>
                         <textarea class="field-textarea" id="inp-objective" rows="4" placeholder="To Secure a Strategic Role in a leading High-Tech Company..." oninput="syncToResume()"></textarea>
                     </div>
                 </div>
             </div>
 
-            <!-- 3. EDUCATION -->
+            <!-- 3. WORK EXPERIENCE (For 2-Page / Experienced) -->
+            <div class="form-section highlight-experienced" id="form-section-experience" style="display: none;">
+                <div class="form-section-title" onclick="toggleSection(this)">
+                    <span>💼 Work Experience (Experienced)</span>
+                    <span>▾</span>
+                </div>
+                <div class="form-section-body">
+                    <div id="experience-repeater">
+                        <!-- Dynamic experience entries populated by JS -->
+                    </div>
+                    <button type="button" class="btn-add" onclick="addExperienceItem()">+ Add Work Experience</button>
+                </div>
+            </div>
+
+            <!-- 4. EDUCATION -->
             <div class="form-section">
                 <div class="form-section-title" onclick="toggleSection(this)">
                     <span>🎓 Education</span>
@@ -633,7 +790,7 @@
                 </div>
             </div>
 
-            <!-- 4. TECHNICAL SKILLS -->
+            <!-- 5. TECHNICAL SKILLS -->
             <div class="form-section">
                 <div class="form-section-title" onclick="toggleSection(this)">
                     <span>🛠️ Technical Skills</span>
@@ -647,7 +804,7 @@
                 </div>
             </div>
 
-            <!-- 5. PROJECTS -->
+            <!-- 6. PROJECTS -->
             <div class="form-section">
                 <div class="form-section-title" onclick="toggleSection(this)">
                     <span>💼 Projects</span>
@@ -661,7 +818,7 @@
                 </div>
             </div>
 
-            <!-- 6. INTERESTS -->
+            <!-- 7. INTERESTS -->
             <div class="form-section">
                 <div class="form-section-title" onclick="toggleSection(this)">
                     <span>🌟 Interests</span>
@@ -675,7 +832,7 @@
                 </div>
             </div>
 
-            <!-- 7. ACHIEVEMENTS & AWARDS -->
+            <!-- 8. ACHIEVEMENTS & AWARDS -->
             <div class="form-section">
                 <div class="form-section-title" onclick="toggleSection(this)">
                     <span>🏆 Achievements & Awards</span>
@@ -689,7 +846,7 @@
                 </div>
             </div>
 
-            <!-- 8. LINKS -->
+            <!-- 9. LINKS -->
             <div class="form-section">
                 <div class="form-section-title" onclick="toggleSection(this)">
                     <span>🔗 Links</span>
@@ -707,7 +864,7 @@
                 </div>
             </div>
 
-            <!-- 9. DECLARATION -->
+            <!-- 10. DECLARATION -->
             <div class="form-section">
                 <div class="form-section-title" onclick="toggleSection(this)">
                     <span>📜 Declaration</span>
@@ -726,87 +883,148 @@
         <!-- ==================== RIGHT: LIVE TEMPLATE PREVIEW ==================== -->
         <main class="preview-panel">
             <div class="preview-controls-bar">
-                <span>⚡ <b>Live Preview:</b> Updates instantly as you type in the form or click on the resume.</span>
-                <span>Paper Format: <b>A4 Standard</b></span>
+                <span id="preview-mode-status">📄 Mode: <b>1-Page Fresher Resume</b> (Optimized for single A4 page)</span>
+                <span>Format: <b>A4 Standard</b></span>
             </div>
 
-            <article class="resume-sheet" id="resume-container">
+            <!-- PAGE 1 CONTAINER -->
+            <div class="page-sheet-container page-1" id="sheet-container-page1">
+                <div class="page-indicator-tag" id="tag-page-1">Page 1 of 1</div>
                 
-                <!-- HEADER -->
-                <header class="classic-header">
-                    <!-- Photo Box -->
-                    <div class="classic-photo-container" onclick="document.getElementById('inp-photo').click();" title="Click to upload/change photo">
-                        <img id="resume-photo" src="assets/placeholder-avatar.svg" alt="Candidate Photo">
-                        <div class="photo-overlay">Change Photo</div>
-                    </div>
+                <article class="resume-sheet" id="resume-page-1">
+                    <!-- HEADER -->
+                    <header class="classic-header">
+                        <!-- Photo Box -->
+                        <div class="classic-photo-container" onclick="document.getElementById('inp-photo').click();" title="Click to upload/change photo">
+                            <img id="resume-photo" src="assets/placeholder-avatar.svg" alt="Candidate Photo">
+                            <div class="photo-overlay">Change Photo</div>
+                        </div>
 
-                    <!-- Name & Address -->
-                    <div class="classic-identity">
-                        <h1 class="classic-name" id="view-name">ALEXANDER J. MORGAN</h1>
-                        <div class="classic-address" id="view-address">7/234 Innovation Main Road,&#10;Cyber Valley Tech Park,&#10;Palayamkottai, Tirunelveli-627353</div>
-                    </div>
+                        <!-- Name & Address -->
+                        <div class="classic-identity">
+                            <h1 class="classic-name" id="view-name">ALEXANDER J. MORGAN</h1>
+                            <div class="classic-address" id="view-address">7/234 Innovation Main Road,&#10;Cyber Valley Tech Park,&#10;Palayamkottai, Tirunelveli-627353</div>
+                        </div>
 
-                    <!-- Right Contact Details -->
-                    <div class="classic-contact" id="view-contact">alex.morgan2024@gmail.com&#10;+91 98765 43210&#10;DOB 14 / 07 / 2005</div>
-                </header>
+                        <!-- Right Contact Details -->
+                        <div class="classic-contact" id="view-contact">alex.morgan2024@gmail.com&#10;+91 98765 43210&#10;DOB 14 / 07 / 2005</div>
+                    </header>
 
-                <!-- 1. OBJECTIVE -->
-                <section class="classic-row">
-                    <div class="classic-col-title">Objective</div>
-                    <div class="classic-col-content" id="view-objective">To Secure a Strategic Role in a leading High-Tech Company where I can contribute to key initiatives through precise insight and dedicated execution, ensuring efficient achievement of project goals.</div>
-                </section>
+                    <!-- OBJECTIVE / PROFESSIONAL SUMMARY -->
+                    <section class="classic-row">
+                        <div class="classic-col-title" id="view-objective-title">Objective</div>
+                        <div class="classic-col-content" id="view-objective">To Secure a Strategic Role in a leading High-Tech Company where I can contribute to key initiatives through precise insight and dedicated execution, ensuring efficient achievement of project goals.</div>
+                    </section>
 
-                <!-- 2. EDUCATION -->
-                <section class="classic-row">
-                    <div class="classic-col-title">Education</div>
-                    <div class="classic-col-content" id="view-education">
-                        <!-- Populated dynamically -->
-                    </div>
-                </section>
+                    <!-- WORK EXPERIENCE ROW (Rendered only on Page 1 in 2-page mode) -->
+                    <section class="classic-row" id="row-experience" style="display: none;">
+                        <div class="classic-col-title">Work<br>Experience</div>
+                        <div class="classic-col-content" id="view-experience"></div>
+                    </section>
 
-                <!-- 3. TECHNICAL SKILLS -->
-                <section class="classic-row">
-                    <div class="classic-col-title">Technical<br>Skills</div>
-                    <div class="classic-col-content" id="view-skills">Python, Java, C++&#10;AI-Assisted Full Stack Developer&#10;Prompt Engineering For Development</div>
-                </section>
+                    <!-- EDUCATION (On Page 1 for 1-Page mode, or moved to Page 2 in 2-Page mode) -->
+                    <section class="classic-row" id="row-education-page1">
+                        <div class="classic-col-title">Education</div>
+                        <div class="classic-col-content" id="view-education"></div>
+                    </section>
 
-                <!-- 4. PROJECTS -->
-                <section class="classic-row">
-                    <div class="classic-col-title">Projects</div>
-                    <div class="classic-col-content" id="view-projects">
-                        <!-- Populated dynamically -->
-                    </div>
-                </section>
+                    <!-- TECHNICAL SKILLS -->
+                    <section class="classic-row" id="row-skills">
+                        <div class="classic-col-title">Technical<br>Skills</div>
+                        <div class="classic-col-content" id="view-skills">Python, Java, C++&#10;AI-Assisted Full Stack Developer&#10;Prompt Engineering For Development</div>
+                    </section>
 
-                <!-- 5. INTERESTS -->
-                <section class="classic-row">
-                    <div class="classic-col-title">Interests</div>
-                    <div class="classic-col-content" id="view-interests">
-                        <ul class="diamond-list" id="view-interests-list"></ul>
-                    </div>
-                </section>
+                    <!-- PROJECTS (On Page 1 for 1-Page mode) -->
+                    <section class="classic-row" id="row-projects-page1">
+                        <div class="classic-col-title">Projects</div>
+                        <div class="classic-col-content" id="view-projects-page1"></div>
+                    </section>
 
-                <!-- 6. ACHIEVEMENTS & AWARDS -->
-                <section class="classic-row">
-                    <div class="classic-col-title">Achievements<br>& Awards</div>
-                    <div class="classic-col-content" id="view-achievements">
-                        <ul class="diamond-list" id="view-achievements-list"></ul>
-                    </div>
-                </section>
+                    <!-- INTERESTS (On Page 1 for 1-Page mode) -->
+                    <section class="classic-row" id="row-interests-page1">
+                        <div class="classic-col-title">Interests</div>
+                        <div class="classic-col-content">
+                            <ul class="diamond-list" id="view-interests-list-page1"></ul>
+                        </div>
+                    </section>
 
-                <!-- 7. LINKS -->
-                <section class="classic-row">
-                    <div class="classic-col-title">Links</div>
-                    <div class="classic-col-content" id="view-links"></div>
-                </section>
+                    <!-- ACHIEVEMENTS & AWARDS (On Page 1 for 1-Page mode) -->
+                    <section class="classic-row" id="row-achievements-page1">
+                        <div class="classic-col-title">Achievements<br>& Awards</div>
+                        <div class="classic-col-content">
+                            <ul class="diamond-list" id="view-achievements-list-page1"></ul>
+                        </div>
+                    </section>
 
-                <!-- 8. DECLARATION -->
-                <section class="classic-row">
-                    <div class="classic-col-title">Declaration</div>
-                    <div class="classic-col-content" id="view-declaration">I hereby declare that above information is correct to the best of my knowledge and belief.</div>
-                </section>
+                    <!-- LINKS (On Page 1 for 1-Page mode) -->
+                    <section class="classic-row" id="row-links-page1">
+                        <div class="classic-col-title">Links</div>
+                        <div class="classic-col-content" id="view-links-page1"></div>
+                    </section>
 
-            </article>
+                    <!-- DECLARATION (On Page 1 for 1-Page mode) -->
+                    <section class="classic-row" id="row-declaration-page1">
+                        <div class="classic-col-title">Declaration</div>
+                        <div class="classic-col-content" id="view-declaration-page1">I hereby declare that above information is correct to the best of my knowledge and belief.</div>
+                    </section>
+
+                </article>
+            </div>
+
+            <!-- PAGE 2 CONTAINER (Active only in 2-Page mode) -->
+            <div class="page-sheet-container page-2" id="sheet-container-page2" style="display: none;">
+                <div class="page-indicator-tag">Page 2 of 2</div>
+                
+                <article class="resume-sheet" id="resume-page-2">
+                    <!-- PAGE 2 MINI HEADER -->
+                    <header class="classic-page2-header">
+                        <div class="classic-page2-name" id="view-page2-name">ALEXANDER J. MORGAN</div>
+                        <div class="classic-page2-contact" id="view-page2-contact">alex.morgan2024@gmail.com | +91 98765 43210</div>
+                    </header>
+
+                    <!-- PROJECTS (On Page 2 for 2-Page mode) -->
+                    <section class="classic-row">
+                        <div class="classic-col-title">Key Projects<br>& Systems</div>
+                        <div class="classic-col-content" id="view-projects-page2"></div>
+                    </section>
+
+                    <!-- EDUCATION (On Page 2 for 2-Page mode) -->
+                    <section class="classic-row">
+                        <div class="classic-col-title">Education</div>
+                        <div class="classic-col-content" id="view-education-page2"></div>
+                    </section>
+
+                    <!-- ACHIEVEMENTS & AWARDS (On Page 2 for 2-Page mode) -->
+                    <section class="classic-row">
+                        <div class="classic-col-title">Achievements<br>& Awards</div>
+                        <div class="classic-col-content">
+                            <ul class="diamond-list" id="view-achievements-list-page2"></ul>
+                        </div>
+                    </section>
+
+                    <!-- INTERESTS (On Page 2 for 2-Page mode) -->
+                    <section class="classic-row">
+                        <div class="classic-col-title">Interests</div>
+                        <div class="classic-col-content">
+                            <ul class="diamond-list" id="view-interests-list-page2"></ul>
+                        </div>
+                    </section>
+
+                    <!-- LINKS (On Page 2 for 2-Page mode) -->
+                    <section class="classic-row">
+                        <div class="classic-col-title">Links</div>
+                        <div class="classic-col-content" id="view-links-page2"></div>
+                    </section>
+
+                    <!-- DECLARATION (On Page 2 for 2-Page mode) -->
+                    <section class="classic-row">
+                        <div class="classic-col-title">Declaration</div>
+                        <div class="classic-col-content" id="view-declaration-page2">I hereby declare that above information is correct to the best of my knowledge and belief.</div>
+                    </section>
+
+                </article>
+            </div>
+
         </main>
 
     </div>
@@ -815,8 +1033,9 @@
     <div class="toast" id="toast">Changes saved successfully!</div>
 
     <script>
-        // Sample Initial Data (Realistic Dummy Data)
-        const sampleData = {
+        // Sample Fresher Data (1-Page)
+        const sampleFresherData = {
+            mode: "1page",
             name: "ALEXANDER J. MORGAN",
             photo: "assets/placeholder-avatar.svg",
             address: "7/234 Innovation Main Road,\nCyber Valley Tech Park,\nPalayamkottai, Tirunelveli-627353",
@@ -824,6 +1043,7 @@
             phone: "+91 98765 43210",
             dob: "DOB 14 / 07 / 2005",
             objective: "To Secure a Strategic Role in a leading High-Tech Company where I can contribute to key initiatives through precise insight and dedicated execution, ensuring efficient achievement of project goals.",
+            experiences: [],
             education: [
                 { school: "Oakridge International Senior Secondary School", degree: "SSLC - State Board", year: "2021 — 95%" },
                 { school: "St. Jude Higher Secondary School", degree: "HSC - State Board", year: "2023 — 88.67%" },
@@ -850,7 +1070,109 @@
             declaration: "I hereby declare that above information is correct to the best of my knowledge and belief."
         };
 
-        let currentData = JSON.parse(JSON.stringify(sampleData));
+        // Sample Experienced Data (2-Page)
+        const sampleExperiencedData = {
+            mode: "2page",
+            name: "ALEXANDER J. MORGAN",
+            photo: "assets/placeholder-avatar.svg",
+            address: "7/234 Innovation Main Road, Suite 400\nCyber Valley Tech Park, Palayamkottai\nTirunelveli - 627353, Tamil Nadu",
+            email: "alex.morgan.tech@gmail.com",
+            phone: "+91 98765 43210",
+            dob: "DOB 14 / 07 / 1999",
+            objective: "Results-driven Senior Full Stack Software Engineer with 5+ years of experience architecting high-scale cloud platforms, microservices, and AI-enabled web systems. Proven track record in reducing server latency by 40% and leading cross-functional engineering teams.",
+            experiences: [
+                {
+                    company: "Apex Cloud Solutions Pvt Ltd",
+                    role: "Senior Software Engineer (Full Stack)",
+                    duration: "2023 — Present | Bangalore, India",
+                    desc: "• Spearheaded the migration of monolithic billing engine to distributed microservices on AWS, handling 2.5M daily transactions.\n• Designed and implemented reactive UI architectures using React.js, TypeScript, and TailwindCSS.\n• Mentored a team of 6 associate developers, championing automated CI/CD and clean code practices."
+                },
+                {
+                    company: "InnovateTech Software Labs",
+                    role: "Software Developer",
+                    duration: "2021 — 2023 | Chennai, India",
+                    desc: "• Built robust RESTful APIs in Node.js and PHP MySQL, powering web portals with 99.98% uptime.\n• Implemented Redis caching layer resulting in a 35% decrease in database queries under peak traffic.\n• Collaborated with product designers in Figma to build accessible, mobile-first responsive dashboards."
+                }
+            ],
+            education: [
+                { school: "Metropolitan Engineering College", degree: "MCA - Master of Computer Applications", year: "2021 — 8.8 CGPA" },
+                { school: "National Institute of Science & Technology", degree: "B.Sc. Computer Science", year: "2019 — 8.6 CGPA" },
+                { school: "St. Jude Higher Secondary School", degree: "HSC - State Board", year: "2016 — 91.2%" }
+            ],
+            skills: "Languages: Python, Java, JavaScript, TypeScript, PHP, SQL\nFrontend & Backend: React.js, Node.js, Express, Next.js, HTML5, CSS3\nCloud & Database: AWS, Docker, Kubernetes, MySQL, MongoDB, Redis\nMethodologies: Agile/Scrum, CI/CD, Microservices, System Design, Prompt Engineering",
+            projects: [
+                {
+                    name: "ENTERPRISE PHARMACY & INVENTORY SUITE",
+                    tech: "React.js, Node.js, MySQL, Redis, AWS S3",
+                    desc: "Engineered an end-to-end pharmaceutical ERP system managing real-time inventory across 45 branch locations, automated stock notifications, supplier invoicing, and compliance auditing."
+                },
+                {
+                    name: "AI-POWERED CLINICAL DIAGNOSTIC PREDICTOR",
+                    tech: "Python, Flask, Scikit-Learn, React, PostgreSQL",
+                    desc: "Developed a secure clinical assistant system providing symptom assessment and disease risk scoring using ML regression and classification models with 94% diagnostic accuracy."
+                },
+                {
+                    name: "REAL-TIME LOGISTICS TRACKING PORTAL",
+                    tech: "TypeScript, Socket.io, Express, MongoDB",
+                    desc: "Built a high-frequency tracking platform providing live GPS telemetry and automated shipment arrival notifications for 500+ daily freight deliveries."
+                }
+            ],
+            interests: "Cloud Distributed Systems & DevOps (Docker, Kubernetes)\nOpen Source AI Development & Model Optimization\nInteractive UI/UX Wireframing & Animation (Figma)\nTechnical Mentorship & Hackathon Judging",
+            achievements: "Winner of National Level Hackathon for Smart Healthcare Systems\nCertified AWS Solutions Architect - Associate\nElite Silver Medalist in Advanced Python & Data Structures (NPTEL)\nPublished Technical Paper on AI Assisted Medical Diagnostics",
+            linkedin: "https://www.linkedin.com/in/alex-morgan-developer/",
+            github: "https://github.com/alex-morgan-dev",
+            declaration: "I hereby declare that above information is correct to the best of my knowledge and belief."
+        };
+
+        let currentData = JSON.parse(JSON.stringify(sampleFresherData));
+
+        // Switch Resume Mode (1-Page vs 2-Page)
+        function setResumeMode(mode) {
+            currentData.mode = mode;
+
+            const btn1 = document.getElementById('btn-mode-1page');
+            const btn2 = document.getElementById('btn-mode-2page');
+            const expSection = document.getElementById('form-section-experience');
+            const sheetContainer2 = document.getElementById('sheet-container-page2');
+            const statusLabel = document.getElementById('preview-mode-status');
+            const panelTitle = document.getElementById('form-panel-title');
+            const modeBadge = document.getElementById('form-panel-mode-badge');
+            const objTitle = document.getElementById('label-objective-title');
+            const objField = document.getElementById('label-objective-field');
+
+            if (mode === '2page') {
+                btn1.classList.remove('active');
+                btn2.classList.add('active');
+                expSection.style.display = 'block';
+                sheetContainer2.style.display = 'block';
+                document.getElementById('tag-page-1').textContent = 'Page 1 of 2';
+                statusLabel.innerHTML = '📄 Mode: <b>2-Page Experienced Resume</b> (Page 1: Experience & Skills | Page 2: Projects & Education)';
+                panelTitle.textContent = 'Experienced Resume Details';
+                modeBadge.textContent = '2-Page Mode';
+                objTitle.textContent = '🎯 Professional Summary';
+                objField.textContent = 'Summary Statement';
+
+                // If experiences are empty, supply sample experiences
+                if (!currentData.experiences || currentData.experiences.length === 0) {
+                    currentData.experiences = JSON.parse(JSON.stringify(sampleExperiencedData.experiences));
+                }
+            } else {
+                btn2.classList.remove('active');
+                btn1.classList.add('active');
+                expSection.style.display = 'none';
+                sheetContainer2.style.display = 'none';
+                document.getElementById('tag-page-1').textContent = 'Page 1 of 1';
+                statusLabel.innerHTML = '📄 Mode: <b>1-Page Fresher Resume</b> (Optimized for single A4 page)';
+                panelTitle.textContent = 'Fresher Resume Details';
+                modeBadge.textContent = '1-Page Mode';
+                objTitle.textContent = '🎯 Career Objective';
+                objField.textContent = 'Objective Statement';
+            }
+
+            renderExperienceRepeater();
+            renderResume();
+            autoSaveDebounced();
+        }
 
         // Accordion toggle
         function toggleSection(headerEl) {
@@ -864,7 +1186,7 @@
             }
         }
 
-        // Toggle Form Panel (Split View vs Full Preview)
+        // Toggle Form Panel
         function toggleFormPanel() {
             const panel = document.getElementById('form-panel');
             const btn = document.getElementById('btn-toggle-form');
@@ -877,7 +1199,7 @@
             }
         }
 
-        // Populate Form Fields from Data
+        // Populate Form Fields
         function populateForm() {
             document.getElementById('inp-name').value = currentData.name || '';
             document.getElementById('inp-address').value = currentData.address || '';
@@ -897,12 +1219,58 @@
                 document.getElementById('resume-photo').src = currentData.photo;
             }
 
+            renderExperienceRepeater();
             renderEducationRepeater();
             renderProjectsRepeater();
             renderResume();
         }
 
-        // Education Repeater in Form
+        // Experience Repeater
+        function renderExperienceRepeater() {
+            const container = document.getElementById('experience-repeater');
+            container.innerHTML = '';
+            (currentData.experiences || []).forEach((exp, idx) => {
+                const item = document.createElement('div');
+                item.className = 'repeater-item';
+                item.innerHTML = `
+                    <div class="repeater-item-header">
+                        <span>Work Experience #${idx + 1}</span>
+                        <button type="button" class="btn-remove" onclick="removeExperienceItem(${idx})">&times; Remove</button>
+                    </div>
+                    <div class="field-group" style="margin-bottom: 0.4rem;">
+                        <input type="text" class="field-input" placeholder="Company Name" value="${escapeHtml(exp.company)}" oninput="updateExp(${idx}, 'company', this.value)">
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.4rem;">
+                        <input type="text" class="field-input" placeholder="Job Title / Role" value="${escapeHtml(exp.role)}" oninput="updateExp(${idx}, 'role', this.value)">
+                        <input type="text" class="field-input" placeholder="Duration (e.g. 2022 - Present)" value="${escapeHtml(exp.duration)}" oninput="updateExp(${idx}, 'duration', this.value)">
+                    </div>
+                    <div class="field-group">
+                        <textarea class="field-textarea" rows="3" placeholder="Key responsibilities and accomplishments (bullet points)" oninput="updateExp(${idx}, 'desc', this.value)">${escapeHtml(exp.desc)}</textarea>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function addExperienceItem() {
+            if (!currentData.experiences) currentData.experiences = [];
+            currentData.experiences.push({ company: "New Tech Company", role: "Software Engineer", duration: "2023 — Present | City", desc: "• Built robust features and led project deliverables.\n• Enhanced system reliability and performance." });
+            renderExperienceRepeater();
+            renderResume();
+        }
+
+        function removeExperienceItem(idx) {
+            currentData.experiences.splice(idx, 1);
+            renderExperienceRepeater();
+            renderResume();
+        }
+
+        function updateExp(idx, key, val) {
+            currentData.experiences[idx][key] = val;
+            renderResume();
+        }
+
+        // Education Repeater
         function renderEducationRepeater() {
             const container = document.getElementById('education-repeater');
             container.innerHTML = '';
@@ -944,7 +1312,7 @@
             renderResume();
         }
 
-        // Projects Repeater in Form
+        // Projects Repeater
         function renderProjectsRepeater() {
             const container = document.getElementById('projects-repeater');
             container.innerHTML = '';
@@ -988,7 +1356,7 @@
             renderResume();
         }
 
-        // Sync Form Inputs to currentData and Re-render
+        // Sync Form to Data
         function syncToResume() {
             currentData.name = document.getElementById('inp-name').value;
             currentData.address = document.getElementById('inp-address').value;
@@ -1007,9 +1375,11 @@
             autoSaveDebounced();
         }
 
-        // Render Resume Template DOM
+        // Render Resume DOM for 1-Page or 2-Page mode
         function renderResume() {
-            // Header
+            const is2Page = (currentData.mode === '2page');
+
+            // Header (Page 1)
             document.getElementById('view-name').textContent = currentData.name || 'YOUR FULL NAME';
             document.getElementById('view-address').textContent = currentData.address || '';
             
@@ -1019,75 +1389,111 @@
             if (currentData.dob) contactParts.push(currentData.dob);
             document.getElementById('view-contact').textContent = contactParts.join('\n');
 
-            // Objective
-            document.getElementById('view-objective').textContent = currentData.objective || '';
+            // Page 2 Mini Header
+            document.getElementById('view-page2-name').textContent = currentData.name || 'YOUR FULL NAME';
+            const page2Contact = [currentData.email, currentData.phone].filter(Boolean).join(' | ');
+            document.getElementById('view-page2-contact').textContent = page2Contact;
 
-            // Education
-            const eduView = document.getElementById('view-education');
-            eduView.innerHTML = '';
-            (currentData.education || []).forEach(edu => {
-                const div = document.createElement('div');
-                div.className = 'edu-entry';
-                div.innerHTML = `
-                    <div class="edu-school">${escapeHtml(edu.school)}</div>
-                    <div class="edu-degree">${escapeHtml(edu.degree)}</div>
-                    <div class="edu-year">${escapeHtml(edu.year)}</div>
-                `;
-                eduView.appendChild(div);
-            });
+            // Objective / Professional Summary
+            document.getElementById('view-objective-title').textContent = is2Page ? 'Professional\nSummary' : 'Objective';
+            document.getElementById('view-objective').textContent = currentData.objective || '';
 
             // Skills
             document.getElementById('view-skills').textContent = currentData.skills || '';
 
-            // Projects
-            const projView = document.getElementById('view-projects');
-            projView.innerHTML = '';
-            (currentData.projects || []).forEach(p => {
-                const div = document.createElement('div');
-                div.className = 'project-entry';
-                div.innerHTML = `
-                    <div class="project-heading">${escapeHtml(p.name)}</div>
-                    <div class="project-tech"><b>Technologies Used:</b> ${escapeHtml(p.tech)}</div>
-                    <div class="project-desc">${escapeHtml(p.desc)}</div>
-                `;
-                projView.appendChild(div);
-            });
-
-            // Interests with Diamond Bullets
-            const intList = document.getElementById('view-interests-list');
-            intList.innerHTML = '';
-            if (currentData.interests) {
-                currentData.interests.split('\n').filter(l => l.trim()).forEach(line => {
-                    const li = document.createElement('li');
-                    li.textContent = '✦' + line.replace(/^[✦\*\-\+]\s*/, '');
-                    intList.appendChild(li);
+            // Work Experience (Shown only in 2-Page mode on Page 1)
+            const rowExp = document.getElementById('row-experience');
+            const viewExp = document.getElementById('view-experience');
+            if (is2Page && currentData.experiences && currentData.experiences.length > 0) {
+                rowExp.style.display = 'flex';
+                viewExp.innerHTML = '';
+                currentData.experiences.forEach(e => {
+                    const div = document.createElement('div');
+                    div.className = 'exp-entry';
+                    div.innerHTML = `
+                        <div class="exp-header">
+                            <span class="exp-company">${escapeHtml(e.company)}</span>
+                            <span class="exp-duration">${escapeHtml(e.duration)}</span>
+                        </div>
+                        <div class="exp-role">${escapeHtml(e.role)}</div>
+                        <div class="exp-desc">${escapeHtml(e.desc)}</div>
+                    `;
+                    viewExp.appendChild(div);
                 });
+            } else {
+                rowExp.style.display = 'none';
             }
 
-            // Achievements with Diamond Bullets
-            const achList = document.getElementById('view-achievements-list');
-            achList.innerHTML = '';
-            if (currentData.achievements) {
-                currentData.achievements.split('\n').filter(l => l.trim()).forEach(line => {
-                    const li = document.createElement('li');
-                    li.textContent = '✦' + line.replace(/^[✦\*\-\+]\s*/, '');
-                    achList.appendChild(li);
-                });
+            // HTML builders for Education, Projects, Interests, Achievements, Links, Declaration
+            function buildEducationHTML() {
+                return (currentData.education || []).map(edu => `
+                    <div class="edu-entry">
+                        <div class="edu-school">${escapeHtml(edu.school)}</div>
+                        <div class="edu-degree">${escapeHtml(edu.degree)}</div>
+                        <div class="edu-year">${escapeHtml(edu.year)}</div>
+                    </div>
+                `).join('');
             }
 
-            // Links
-            const linksView = document.getElementById('view-links');
-            let linksHtml = '';
-            if (currentData.linkedin) {
-                linksHtml += `<div>LINKEDIN- ${escapeHtml(currentData.linkedin)}</div>`;
+            function buildProjectsHTML() {
+                return (currentData.projects || []).map(p => `
+                    <div class="project-entry">
+                        <div class="project-heading">${escapeHtml(p.name)}</div>
+                        <div class="project-tech"><b>Technologies Used:</b> ${escapeHtml(p.tech)}</div>
+                        <div class="project-desc">${escapeHtml(p.desc)}</div>
+                    </div>
+                `).join('');
             }
-            if (currentData.github) {
-                linksHtml += `<div>GITHUB- ${escapeHtml(currentData.github)}</div>`;
-            }
-            linksView.innerHTML = linksHtml;
 
-            // Declaration
-            document.getElementById('view-declaration').textContent = currentData.declaration || '';
+            function buildListHTML(str) {
+                if (!str) return '';
+                return str.split('\n').filter(l => l.trim()).map(line => {
+                    return `<li>✦${escapeHtml(line.replace(/^[✦\*\-\+]\s*/, ''))}</li>`;
+                }).join('');
+            }
+
+            function buildLinksHTML() {
+                let html = '';
+                if (currentData.linkedin) html += `<div>LINKEDIN- ${escapeHtml(currentData.linkedin)}</div>`;
+                if (currentData.github) html += `<div>GITHUB- ${escapeHtml(currentData.github)}</div>`;
+                return html;
+            }
+
+            // Section distribution based on Mode:
+            if (is2Page) {
+                // In 2-Page mode:
+                // Page 1 has: Header, Summary, Work Experience, Technical Skills.
+                document.getElementById('row-education-page1').style.display = 'none';
+                document.getElementById('row-projects-page1').style.display = 'none';
+                document.getElementById('row-interests-page1').style.display = 'none';
+                document.getElementById('row-achievements-page1').style.display = 'none';
+                document.getElementById('row-links-page1').style.display = 'none';
+                document.getElementById('row-declaration-page1').style.display = 'none';
+
+                // Page 2 has: Mini Header, Projects, Education, Achievements, Interests, Links, Declaration
+                document.getElementById('view-projects-page2').innerHTML = buildProjectsHTML();
+                document.getElementById('view-education-page2').innerHTML = buildEducationHTML();
+                document.getElementById('view-achievements-list-page2').innerHTML = buildListHTML(currentData.achievements);
+                document.getElementById('view-interests-list-page2').innerHTML = buildListHTML(currentData.interests);
+                document.getElementById('view-links-page2').innerHTML = buildLinksHTML();
+                document.getElementById('view-declaration-page2').textContent = currentData.declaration || '';
+            } else {
+                // In 1-Page mode:
+                // Page 1 has everything!
+                document.getElementById('row-education-page1').style.display = 'flex';
+                document.getElementById('row-projects-page1').style.display = 'flex';
+                document.getElementById('row-interests-page1').style.display = 'flex';
+                document.getElementById('row-achievements-page1').style.display = 'flex';
+                document.getElementById('row-links-page1').style.display = 'flex';
+                document.getElementById('row-declaration-page1').style.display = 'flex';
+
+                document.getElementById('view-education').innerHTML = buildEducationHTML();
+                document.getElementById('view-projects-page1').innerHTML = buildProjectsHTML();
+                document.getElementById('view-interests-list-page1').innerHTML = buildListHTML(currentData.interests);
+                document.getElementById('view-achievements-list-page1').innerHTML = buildListHTML(currentData.achievements);
+                document.getElementById('view-links-page1').innerHTML = buildLinksHTML();
+                document.getElementById('view-declaration-page1').textContent = currentData.declaration || '';
+            }
         }
 
         // Photo Upload Handling
@@ -1126,26 +1532,34 @@
                 try {
                     currentData = JSON.parse(saved);
                 } catch(e) {
-                    currentData = JSON.parse(JSON.stringify(sampleData));
+                    currentData = JSON.parse(JSON.stringify(sampleFresherData));
                 }
             } else {
-                currentData = JSON.parse(JSON.stringify(sampleData));
+                currentData = JSON.parse(JSON.stringify(sampleFresherData));
             }
+            setResumeMode(currentData.mode || '1page');
             populateForm();
         }
 
         // Quick Fill Sample
         function loadSampleData() {
-            currentData = JSON.parse(JSON.stringify(sampleData));
+            if (currentData.mode === '2page') {
+                currentData = JSON.parse(JSON.stringify(sampleExperiencedData));
+            } else {
+                currentData = JSON.parse(JSON.stringify(sampleFresherData));
+            }
+            setResumeMode(currentData.mode);
             populateForm();
             saveToStorage();
-            showToast('Sample data loaded!');
+            showToast('Sample data loaded for ' + (currentData.mode === '2page' ? 'Experienced' : 'Fresher') + ' mode!');
         }
 
         // Clear All Fields
         function clearAllFields() {
             if (confirm('Are you sure you want to clear all fields to start blank?')) {
+                const mode = currentData.mode;
                 currentData = {
+                    mode: mode,
                     name: "",
                     photo: "assets/placeholder-avatar.svg",
                     address: "",
@@ -1153,6 +1567,7 @@
                     phone: "",
                     dob: "",
                     objective: "",
+                    experiences: mode === '2page' ? [{ company: "", role: "", duration: "", desc: "" }] : [],
                     education: [{ school: "", degree: "", year: "" }],
                     skills: "",
                     projects: [{ name: "", tech: "", desc: "" }],
