@@ -1,26 +1,55 @@
+/* ============================================================
+   AuraCV — Zety-Inspired Professional Student Theme
+   Aesthetic: Clean White, Amber Gold Buttons, Royal Blue Accents
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Outfit:wght@500;600;700;800&display=swap');
+
 :root {
-    /* Academic & Student Professional Colors */
-    --bg-dark: #f8fafc;
-    --surface: #ffffff;
-    --surface-border: #e2e8f0;
-    --surface-border-subtle: #f1f5f9;
-    --primary: #2563eb;
-    --primary-dark: #1e40af;
-    --primary-glow: rgba(37, 99, 235, 0.2);
-    --secondary: #0284c7;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --text-subtle: #94a3b8;
-    --gradient: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
-    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-    --card-shadow-hover: 0 20px 25px -5px rgba(37, 99, 235, 0.08), 0 8px 10px -6px rgba(37, 99, 235, 0.04);
-    
-    /* Layout */
-    --container-width: 1200px;
-    --nav-height: 75px;
+    /* Brand Colors - Zety Signature */
+    --amber: #ffb800;
+    --amber-hover: #f59e0b;
+    --amber-text: #111827;
+
+    --blue: #185adb;
+    --blue-hover: #1245a8;
+    --blue-light: #eff6ff;
+    --blue-border: #bfdbfe;
+
+    --navy: #0f172a;
+    --navy-light: #1e293b;
+
+    /* Base Surfaces */
+    --bg-page: #ffffff;
+    --bg-soft: #f8fafc;
+    --bg-card: #ffffff;
+    --border: #e2e8f0;
+    --border-subtle: #f1f5f9;
+
+    /* Typography */
+    --text-main: #111827;
+    --text-muted: #4b5563;
+    --text-light: #9ca3af;
+
+    /* Shadows & Radii */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 14px rgba(0,0,0,0.07);
+    --shadow-lg: 0 12px 30px rgba(0,0,0,0.09);
+    --shadow-blue: 0 8px 24px rgba(24,90,219,0.22);
+    --shadow-paper: 0 20px 40px -15px rgba(15,23,42,0.18), 0 2px 10px rgba(15,23,42,0.06);
+
+    --radius-pill: 9999px;
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+
+    --nav-height: 72px;
+    --container: 1240px;
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-* {
+/* Reset */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,42 +60,44 @@ html {
 }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-page);
     color: var(--text-main);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
-    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, .logo-text {
-    font-family: 'Outfit', sans-serif;
+h1, h2, h3, h4, .font-heading {
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
     font-weight: 700;
     color: var(--text-main);
+    line-height: 1.25;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 .container {
-    max-width: var(--container-width);
+    max-width: var(--container);
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* Background Accents (Subtle, clean academic light mesh) */
-.bg-mesh {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: 
-        radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 45%),
-        radial-gradient(circle at 85% 80%, rgba(2, 132, 199, 0.05) 0%, transparent 45%);
-    filter: blur(60px);
-}
-
-/* Navbar */
+/* ============================================================
+   NAVBAR (Clean White with Zety Blue Polygonal Icon)
+   ============================================================ */
 .navbar {
     height: var(--nav-height);
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
     position: fixed;
     top: 0;
     left: 0;
@@ -74,14 +105,11 @@ h1, h2, h3, .logo-text {
     z-index: 1000;
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--surface-border);
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .navbar.scrolled {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .nav-content {
@@ -94,64 +122,152 @@ h1, h2, h3, .logo-text {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.45rem;
-    color: #1e3a8a;
+    gap: 0.6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.55rem;
     font-weight: 800;
-    text-decoration: none;
+    color: var(--navy);
+    letter-spacing: -0.02em;
 }
 
-.logo-icon {
-    width: 14px;
-    height: 14px;
-    background: var(--gradient);
-    border-radius: 4px;
-    display: inline-block;
+.logo-badge {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #185adb 0%, #00b4d8 100%);
+    border-radius: 6px;
+    transform: rotate(8deg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(24,90,219,0.3);
 }
 
-.logo-text span {
-    color: var(--primary);
+.logo-badge::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    transform: rotate(-8deg);
+}
+
+.logo span {
+    color: var(--blue);
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.25rem;
+    align-items: center;
 }
 
 .nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.2s ease;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: var(--transition);
 }
 
-.nav-links a:hover {
-    color: var(--primary);
+.nav-links a:hover, .nav-links a.active {
+    color: var(--blue);
 }
 
 .nav-cta {
     display: flex;
-    gap: 0.85rem;
     align-items: center;
+    gap: 1rem;
 }
 
-/* User Profile Badge in Nav */
+/* ============================================================
+   BUTTONS (Zety Signature Amber & Royal Blue)
+   ============================================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.6rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Amber Primary Button */
+.btn-amber {
+    background-color: var(--amber);
+    color: var(--amber-text);
+    border-color: var(--amber);
+    box-shadow: 0 4px 14px rgba(255, 184, 0, 0.25);
+}
+
+.btn-amber:hover {
+    background-color: var(--amber-hover);
+    border-color: var(--amber-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(255, 184, 0, 0.35);
+}
+
+/* Royal Blue Button */
+.btn-blue {
+    background-color: var(--blue);
+    color: #ffffff;
+    border-color: var(--blue);
+}
+
+.btn-blue:hover {
+    background-color: var(--blue-hover);
+    border-color: var(--blue-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-blue);
+}
+
+/* Outlined Pill Buttons */
+.btn-outline-blue {
+    background: transparent;
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-outline-blue:hover {
+    background: var(--blue-light);
+    transform: translateY(-1px);
+}
+
+.btn-outline-dark {
+    background: #ffffff;
+    color: var(--navy);
+    border-color: var(--navy);
+}
+
+.btn-outline-dark:hover {
+    background: var(--bg-soft);
+    transform: translateY(-1px);
+}
+
+.btn-large {
+    padding: 0.9rem 2.2rem;
+    font-size: 1.05rem;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* User profile avatar in nav */
 .user-profile {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.4rem 0.9rem;
-    background: #f1f5f9;
-    border: 1px solid var(--surface-border);
-    border-radius: 100px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.user-profile:hover {
-    background: #e2e8f0;
-    border-color: var(--primary);
+    gap: 0.6rem;
+    padding: 0.35rem 0.85rem 0.35rem 0.45rem;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
 }
 
 .user-avatar {
@@ -159,574 +275,853 @@ h1, h2, h3, .logo-text {
     height: 30px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
-    border: 2px solid var(--primary) !important;
+    border: 2px solid var(--blue) !important;
 }
 
 .user-name {
     font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--text-main);
+    font-weight: 700;
+    color: var(--navy);
 }
 
 .logout-btn {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-decoration: none;
-    margin-left: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-left: 0.25rem;
+    transition: var(--transition);
 }
 
 .logout-btn:hover {
-    color: #ef4444;
+    color: #dc2626;
 }
 
-/* Badges */
-.badge {
-    display: inline-block;
-    padding: 0.4rem 0.85rem;
-    background: #eff6ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 100px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--primary-dark);
-    margin-bottom: 1.25rem;
-}
-
-/* Buttons */
-.btn {
-    padding: 0.7rem 1.4rem;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block;
-    cursor: pointer;
-    border: none;
-    box-sizing: border-box;
-}
-
-.btn-primary {
-    background: var(--gradient);
-    color: #ffffff !important;
-    box-shadow: 0 4px 12px var(--primary-glow);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
-}
-
-.btn-secondary {
-    background: #f1f5f9;
-    color: var(--text-main);
-    border: 1px solid var(--surface-border);
-}
-
-.btn-secondary:hover {
-    background: #e2e8f0;
-}
-
-.btn-outline {
-    background: #ffffff;
-    border: 1px solid var(--surface-border);
-    color: var(--text-main);
-}
-
-.btn-outline:hover {
-    background: #f8fafc;
-    border-color: #cbd5e1;
-}
-
-.btn-large {
-    padding: 0.9rem 1.8rem;
-    font-size: 1.05rem;
-}
-
-.btn-full {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* Hero Section */
-.hero {
+/* ============================================================
+   HERO SECTION ("Just three simple steps" — Image 3)
+   ============================================================ */
+.hero-zety {
     padding-top: calc(var(--nav-height) + 3.5rem);
-    padding-bottom: 5rem;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
+    padding-bottom: 4.5rem;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
 }
 
-.hero-grid {
+.hero-zety-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 3.5rem;
     align-items: center;
 }
 
-.hero-title {
-    font-size: 3.5rem;
-    line-height: 1.15;
-    margin-bottom: 1.25rem;
-    color: var(--text-main);
+.hero-heading {
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    line-height: 1.1;
 }
 
-.gradient-text {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-subtitle {
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    margin-bottom: 2.25rem;
-    max-width: 620px;
-    line-height: 1.6;
-}
-
-.hero-actions {
+/* Numbered Steps List */
+.steps-list {
     display: flex;
-    gap: 1.25rem;
+    flex-direction: column;
+    gap: 1.6rem;
     margin-bottom: 2.5rem;
 }
 
-.hero-stats {
+.step-item {
     display: flex;
-    gap: 2.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--surface-border);
+    align-items: flex-start;
+    gap: 1.25rem;
 }
 
-.stat-item {
+.step-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #e0f2fe;
+    color: #0284c7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid #bae6fd;
 }
 
-.stat-num {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--primary-dark);
+.step-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--navy-light);
+    line-height: 1.45;
+    padding-top: 0.2rem;
 }
 
-.stat-label {
-    font-size: 0.85rem;
-    color: var(--text-muted);
+.hero-cta-box {
+    margin-top: 2rem;
 }
 
-/* Hero Visual */
-.hero-visual {
+.terms-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.85rem;
+}
+
+.terms-note a {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+/* Hero Right: Clean Realistic Paper Resume Mockup with geometric accents */
+.hero-preview-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
 }
 
-.resume-card-preview {
-    background: #ffffff;
-    border: 1px solid var(--surface-border);
-    border-radius: 20px;
-    padding: 0.75rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+/* Playful background decorative shapes (Image 3) */
+.deco-circle-red {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #ef4444;
+    border-radius: 50%;
+    top: 50px;
+    left: 20px;
+    z-index: 1;
+}
+
+.deco-stripes-pink {
+    position: absolute;
+    width: 48px;
+    height: 120px;
+    top: 60px;
+    right: 25px;
+    background: repeating-linear-gradient(45deg, #fecdd3, #fecdd3 3px, transparent 3px, transparent 9px);
+    z-index: 1;
+}
+
+.deco-triangle-teal {
+    position: absolute;
+    bottom: 80px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid #a7f3d0;
+    z-index: 1;
+}
+
+.deco-wavy-lines {
+    position: absolute;
+    bottom: 120px;
+    left: 10px;
+    width: 50px;
+    height: 40px;
+    background-image: radial-gradient(#bae6fd 2px, transparent 2px);
+    background-size: 8px 8px;
+    z-index: 1;
+}
+
+/* Paper Resume Mockup Sheet */
+.paper-resume {
     position: relative;
     z-index: 2;
-    overflow: hidden;
-}
-
-.resume-card-preview img {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
+    max-width: 440px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: var(--shadow-paper);
+    border: 1px solid #d1d5db;
+    padding: 2.2rem 2.2rem;
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    transition: transform 0.3s ease;
 }
 
-.glow-effect {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110%;
-    height: 110%;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
-    z-index: -1;
+.paper-resume:hover {
+    transform: translateY(-4px);
 }
 
-/* Features */
-.section {
-    padding: 6rem 0;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3.5rem;
-}
-
-.section-title {
-    font-size: 2.6rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-main);
-}
-
-.section-subtitle {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.feature-card {
-    background: var(--surface);
-    border: 1px solid var(--surface-border);
-    padding: 2.5rem 2rem;
-    border-radius: 18px;
-    transition: all 0.3s ease;
-    box-shadow: var(--card-shadow);
-}
-
-.feature-card:hover {
-    border-color: var(--primary);
-    transform: translateY(-6px);
-    box-shadow: var(--card-shadow-hover);
-}
-
-.feature-icon {
-    font-size: 2.2rem;
+.paper-header {
+    border-bottom: 2px solid #111827;
+    padding-bottom: 1rem;
     margin-bottom: 1.25rem;
 }
 
-.feature-card h3 {
-    font-size: 1.35rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-main);
+.paper-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.1;
 }
 
-.feature-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.5;
+.paper-role {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-top: 0.2rem;
 }
 
-/* Templates Catalog Page */
-.templates-hero {
-    padding-top: calc(var(--nav-height) + 3rem);
-    padding-bottom: 3rem;
-    text-align: center;
-    width: 100%;
+.paper-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    font-size: 0.72rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
 }
 
-.templates-grid {
+.paper-section-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #111827;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.2rem;
+}
+
+.paper-item {
+    margin-bottom: 0.65rem;
+}
+
+.paper-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.paper-item-sub {
+    font-size: 0.72rem;
+    color: #4b5563;
+    margin-bottom: 0.2rem;
+}
+
+.paper-bullet {
+    font-size: 0.7rem;
+    color: #4b5563;
+    line-height: 1.4;
+    padding-left: 0.8rem;
+    position: relative;
+}
+
+.paper-bullet::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #185adb;
+}
+
+.paper-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.3rem;
+}
+
+.paper-tag {
+    font-size: 0.65rem;
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ============================================================
+   3-STEP VALUE SECTION (Image 2)
+   ============================================================ */
+.process-section {
+    padding: 4.5rem 0 5rem 0;
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.process-top-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 3.5rem;
+}
+
+.process-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    padding-bottom: 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+    margin-bottom: 3.5rem;
 }
 
-.template-card {
-    background: var(--surface);
-    border: 1px solid var(--surface-border);
-    border-radius: 18px;
-    overflow: hidden;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--card-shadow);
+.process-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.template-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--primary);
-    box-shadow: var(--card-shadow-hover);
+.process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: #cbd5e1;
 }
 
-.template-preview {
+.process-illustration {
     width: 100%;
-    height: 420px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.75rem;
+    background: #f8fafc;
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+}
+
+.process-card h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+}
+
+.process-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    max-width: 290px;
+}
+
+/* ============================================================
+   TEMPLATE SHOWCASE SECTION ("Pick a resume template" — Image 1)
+   ============================================================ */
+.showcase-section {
+    padding: 5rem 0 5.5rem 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.section-heading-zety {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+}
+
+.templates-showcase-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+    margin-bottom: 3rem;
+}
+
+/* Template Card with Zety Active/Hover Blue Border */
+.zety-template-card {
+    background: #ffffff;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zety-template-card:hover, .zety-template-card.active {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(24, 90, 219, 0.15), var(--shadow-lg);
+}
+
+.zety-template-card.active {
+    border-width: 3px;
+}
+
+.zety-card-preview {
+    width: 100%;
+    height: 380px;
+    background: #f9fafb;
+    border-radius: var(--radius-sm);
     overflow: hidden;
     position: relative;
-    background: #f1f5f9;
+    border: 1px solid #e5e7eb;
 }
 
-.template-preview img {
+.zety-card-preview img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
-.template-card:hover .template-preview img {
-    transform: scale(1.03);
+.zety-template-card:hover .zety-card-preview img {
+    transform: scale(1.02);
 }
 
-.template-overlay {
+/* Overlay with "Use this template" Button */
+.zety-card-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 23, 42, 0.4);
-    backdrop-filter: blur(3px);
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.25s ease;
+    transition: var(--transition);
 }
 
-.template-card:hover .template-overlay {
+.zety-template-card:hover .zety-card-overlay,
+.zety-template-card.active .zety-card-overlay {
     opacity: 1;
 }
 
-.template-info {
-    padding: 1.75rem;
-    background: #ffffff;
-    border-top: 1px solid var(--surface-border);
+.zety-card-overlay .btn-blue {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
-.template-name {
-    font-size: 1.35rem;
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-    color: var(--text-main);
-}
-
-.template-desc {
-    color: var(--text-muted);
-    font-size: 0.92rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.5;
-}
-
-/* Auth Page */
-.auth-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
-    background-color: var(--bg-dark);
-}
-
-.auth-container {
-    width: 100%;
-    max-width: 450px;
-}
-
-.auth-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.auth-card {
-    background: var(--surface);
-    border: 1px solid var(--surface-border);
-    border-radius: 20px;
-    padding: 2.25rem;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-}
-
-.auth-tabs {
-    display: flex;
-    position: relative;
-    margin-bottom: 2rem;
-    background: #f1f5f9;
-    border-radius: 10px;
-    padding: 4px;
-}
-
-.tab-btn {
-    flex: 1;
-    padding: 0.65rem;
-    border: none;
-    background: none;
-    color: var(--text-muted);
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    z-index: 1;
-    transition: color 0.25s ease;
-}
-
-.tab-btn.active {
-    color: var(--text-main);
-}
-
-.tab-indicator {
+/* Zoom Icon at Bottom Right */
+.zoom-btn {
     position: absolute;
-    top: 4px;
-    left: 4px;
-    width: calc(50% - 4px);
-    height: calc(100% - 8px);
+    bottom: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-size: 1.1rem;
+    z-index: 5;
+    transition: var(--transition);
 }
 
-.auth-form {
-    display: none;
+.zoom-btn:hover {
+    background: var(--blue);
+    color: #ffffff;
 }
 
-.auth-form.active {
-    display: block;
-    animation: fadeIn 0.35s ease;
+/* Recommended Badge (Image 5) */
+.recommended-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fecdd3;
+    color: #be123c;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.85rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    z-index: 4;
+    white-space: nowrap;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.form-group {
-    margin-bottom: 1.25rem;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.85rem;
-}
-
-.form-group label {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #334155;
-    margin-bottom: 0.4rem;
-}
-
-.form-group input {
+/* Color Swatches Container (Image 1 & 5) */
+.color-swatches {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.1rem;
     width: 100%;
-    background: #f8fafc;
-    border: 1px solid var(--surface-border);
-    border-radius: 10px;
-    padding: 0.7rem 0.9rem;
-    color: var(--text-main);
-    font-family: inherit;
-    font-size: 0.9rem;
-    transition: all 0.2s ease;
 }
 
-.form-group input:focus {
-    outline: none;
-    border-color: var(--primary);
+.swatch-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1px #d1d5db;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.swatch-dot:hover, .swatch-dot.active {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 2px var(--navy);
+}
+
+.dot-navy    { background: #1e3a8a; }
+.dot-blue    { background: #2563eb; }
+.dot-teal    { background: #0d9488; }
+.dot-purple  { background: #7c3aed; }
+.dot-orange  { background: #ea580c; }
+.dot-green   { background: #16a34a; }
+.dot-rainbow { background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red); }
+
+/* ============================================================
+   TEMPLATES CATALOG PAGE ("Best templates for students" — Image 5)
+   ============================================================ */
+.templates-page-header {
+    padding-top: calc(var(--nav-height) + 2.5rem);
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.templates-page-header h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.templates-page-header p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+.templates-catalog-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2.5rem;
+    align-items: flex-start;
+    padding-bottom: 7rem;
+}
+
+/* Left Filter Sidebar */
+.filter-sidebar {
     background: #ffffff;
-    box-shadow: 0 0 0 3px var(--primary-glow);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    position: sticky;
+    top: calc(var(--nav-height) + 1.5rem);
 }
 
-.form-options {
+.filter-sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
-    font-size: 0.85rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
 }
 
-.checkbox-container {
+.filter-sidebar-header h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--navy);
+}
+
+.clear-filters-link {
+    font-size: 0.82rem;
+    color: var(--blue);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.clear-filters-link:hover {
+    text-decoration: underline;
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+}
+
+.filter-option {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
+    cursor: pointer;
 }
 
-.forgot-link {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 500;
+.filter-option input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--blue);
+    cursor: pointer;
 }
 
-.divider {
-    position: relative;
-    text-align: center;
-    margin: 1.75rem 0;
+/* Templates Grid in Catalog */
+.templates-catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
 }
 
-.divider::before {
-    content: '';
-    position: absolute;
-    top: 50%;
+/* Bottom Sticky Floating Action Bar (Image 5) */
+.sticky-bottom-bar {
+    position: fixed;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 1px;
-    background: var(--surface-border);
-    z-index: 0;
-}
-
-.divider span {
-    position: relative;
     background: #ffffff;
-    padding: 0 0.85rem;
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 1rem 2rem;
+    z-index: 900;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.06);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.terms-text {
-    font-size: 0.75rem;
-    color: var(--text-muted);
+.choose-later-link {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.choose-later-link:hover {
+    color: var(--blue);
+}
+
+/* ============================================================
+   STUDENT ONBOARDING WIZARD MODAL (Image 4)
+   ============================================================ */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 720px;
+    padding: 3rem 2.5rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
     text-align: center;
+    animation: modalSlide 0.3s ease;
+}
+
+@keyframes modalSlide {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 0.3rem;
+}
+
+.modal-close-btn:hover {
+    color: var(--navy);
+}
+
+.modal-question {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--navy);
     margin-bottom: 1.25rem;
 }
 
-.terms-text a {
-    color: var(--primary);
-    text-decoration: none;
+/* Student Yes/No Toggle (Image 4) */
+.toggle-pills {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.25rem;
 }
 
-.auth-footer {
-    text-align: center;
-    margin-top: 1.5rem;
-}
-
-.auth-footer a {
+.toggle-pill {
+    padding: 0.85rem 3rem;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    font-weight: 700;
+    font-size: 1.05rem;
     color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.auth-footer a:hover {
-    color: var(--primary);
-}
-
-/* Footer */
-.footer {
-    border-top: 1px solid var(--surface-border);
-    padding: 2.5rem 0;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
     background: #ffffff;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
-/* Animations */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0px); }
+.toggle-pill.active {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+    color: var(--navy);
 }
 
-.floating {
-    animation: float 6s ease-in-out infinite;
+.modal-subquestion {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
 }
 
-/* Responsive */
+.modal-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Education Level Grid (Image 4) */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.edu-level-card {
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 1.15rem 0.9rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: #ffffff;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 72px;
+}
+
+.edu-level-card:hover, .edu-level-card.selected {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: var(--blue-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(24, 90, 219, 0.12);
+}
+
+.prefer-not-link {
+    font-size: 0.85rem;
+    color: var(--blue);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ============================================================
+   FOOTER (Clean & Professional)
+   ============================================================ */
+.footer-zety {
+    background: var(--navy);
+    color: #94a3b8;
+    padding: 3rem 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-zety-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-zety-links {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.footer-zety-links a:hover {
+    color: #ffffff;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 @media (max-width: 1024px) {
-    .hero-title { font-size: 2.8rem; }
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .hero-subtitle { margin-left: auto; margin-right: auto; }
-    .hero-actions { justify-content: center; }
-    .hero-stats { justify-content: center; }
-    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-zety-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-heading { font-size: 2.75rem; }
+
+    .steps-list {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .templates-showcase-row {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .templates-catalog-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .education-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .features-grid { grid-template-columns: 1fr; }
-    .hero-title { font-size: 2.2rem; }
+    .hero-heading { font-size: 2.2rem; }
+    .section-heading-zety { font-size: 2rem; }
+    .education-grid { grid-template-columns: 1fr; }
 }

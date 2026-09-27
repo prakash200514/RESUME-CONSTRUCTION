@@ -11,9 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="style.css?v=3">
+
     <style>
+        /* Alias new theme variables for builder compatibility */
+        :root {
+            --primary: var(--navy);
+            --primary-dark: var(--navy-dark);
+            --primary-glow: rgba(26,60,110,0.18);
+            --secondary: var(--navy-light);
+            --bg-dark: var(--bg);
+            --surface-border: var(--border);
+            --text-main: var(--text);
+            --text-muted: var(--text-sub);
+            --gradient: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+        }
+
         /* Overall Page Layout */
         body {
             background-color: #f1f5f9;
@@ -663,49 +676,48 @@
                 margin: 0;
             }
         }
-    </style>
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-    <div class="bg-mesh"></div>
 
     <!-- Top Action Bar -->
     <header class="builder-header">
         <div class="builder-nav">
-            <div style="display: flex; align-items: center; gap: 0.8rem;">
-                <a href="templates.php" class="btn btn-outline" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
-                    &larr; Back to Templates
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="templates.php" class="btn btn-outline-dark" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
+                    &larr; Templates
                 </a>
-                <a href="index.php" class="logo" style="text-decoration: none; color: inherit;">
-                    <span class="logo-icon"></span>
-                    <span class="logo-text">Aura<span>CV</span></span>
+                <a href="index.php" class="logo" style="text-decoration: none; color: inherit; font-size: 1.35rem;">
+                    <span class="logo-badge" style="width:24px; height:24px;"></span>
+                    <span>aura</span>cv
                 </a>
             </div>
 
             <!-- 1 Page vs 2 Page Toggle -->
             <div class="mode-switch-group">
                 <button type="button" class="btn-mode active" id="btn-mode-1page" onclick="setResumeMode('1page')">
-                    🎓 1 Page (Fresher)
+                    &#127891; 1 Page (Fresher)
                 </button>
                 <button type="button" class="btn-mode" id="btn-mode-2page" onclick="setResumeMode('2page')">
-                    💼 2 Pages (Experienced)
+                    &#128188; 2 Pages (Experienced)
                 </button>
             </div>
 
             <div class="builder-actions">
-                <button type="button" class="btn btn-outline" id="btn-toggle-form" onclick="toggleFormPanel();">
-                    📝 Hide Form
+                <button type="button" class="btn btn-outline-dark" id="btn-toggle-form" onclick="toggleFormPanel();" style="padding:0.5rem 0.9rem; font-size:0.85rem;">
+                    Hide Form
                 </button>
-                <button type="button" class="btn btn-outline" onclick="loadSampleData();">
-                    ⚡ Quick Fill Sample
+                <button type="button" class="btn btn-outline-dark" onclick="loadSampleData();" style="padding:0.5rem 0.9rem; font-size:0.85rem;">
+                    Fill Sample
                 </button>
-                <button type="button" class="btn btn-outline" onclick="clearAllFields();">
-                    🗑️ Clear All
+                <button type="button" class="btn btn-outline-dark" onclick="clearAllFields();" style="padding:0.5rem 0.9rem; font-size:0.85rem;">
+                    Clear
                 </button>
-                <button type="button" class="btn btn-outline" onclick="saveToStorage();">
-                    💾 Save Draft
+                <button type="button" class="btn btn-blue" onclick="saveToStorage();" style="padding:0.5rem 1.1rem; font-size:0.85rem;">
+                    Save Draft
                 </button>
-                <button type="button" class="btn btn-primary" onclick="window.print();">
-                    🖨️ Print / Export PDF
+                <button type="button" class="btn btn-amber" onclick="window.print();" style="padding:0.55rem 1.4rem; font-size:0.9rem;">
+                    &#128424; Download PDF
                 </button>
             </div>
         </div>
